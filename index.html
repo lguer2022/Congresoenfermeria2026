@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2.° Congreso de Enfermería de los Hospitales Universitarios · UBA 2026</title>
+<meta name="description" content="18 de noviembre de 2026 · Facultad de Ciencias Médicas, UBA. Docencia, ciencia y asistencia: el triple compromiso de la Enfermería universitaria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --color-bg:#f3f2f2;--color-surface:#eae9e9;--color-white:#fff;--color-text:#201e1d;
+  --color-divider:color-mix(in srgb,#201e1d 40%,transparent);
+  --color-accent:#036636;
+  --color-accent-100:#eef7f1;--color-accent-200:#d5ecdd;--color-accent-300:#acd8bb;--color-accent-400:#6fbb8a;
+  --color-accent-500:#1f8a4f;--color-accent-600:#02552d;--color-accent-700:#014524;--color-accent-800:#03361d;--color-accent-900:#062414;
+  --font:"Archivo",system-ui,sans-serif;
+  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s6:24px;--s8:32px;--s12:48px;--s16:64px;--s24:96px;
+  --wrap:1280px;--muted:color-mix(in srgb,var(--color-text) 62%,transparent);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font);font-size:16px;line-height:1.55}
+h1,h2,h3,h4{font-family:var(--font);font-weight:800;line-height:1.08;letter-spacing:-.02em;margin:0}
+p{margin:0 0 var(--s3);text-wrap:pretty}
+a{color:var(--color-accent);text-underline-offset:3px}
+a:hover{color:var(--color-accent-600)}
+img{display:block;max-width:100%}
+:focus{outline:none}:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+::selection{background:color-mix(in srgb,var(--color-accent) 25%,transparent)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--s6)}
+.kicker{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent)}
+.muted{color:var(--muted)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:flex-start;gap:10px;cursor:pointer;text-decoration:none;font:800 15px/1.2 var(--font);color:var(--color-text);background:transparent;border:1px solid transparent;padding:12px 16px;border-radius:0;text-align:left}
+.btn svg{flex:none}
+.btn-primary{background:var(--color-accent);color:#fff}
+.btn-primary:hover{background:var(--color-accent-600);color:#fff}
+.btn-primary:active{background:var(--color-accent-700)}
+.btn-secondary{border-color:var(--color-divider);color:var(--color-text)}
+.btn-secondary:hover{background:color-mix(in srgb,var(--color-text) 7%,transparent);color:var(--color-text)}
+.btn-inverse{background:#fff;color:var(--color-accent)}
+.btn-inverse:hover{background:var(--color-accent-100);color:var(--color-accent-700)}
+.btn-wide{min-width:240px;justify-content:space-between}
+.tag{display:inline-flex;align-items:center;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;background:var(--color-accent-100);color:var(--color-accent-800)}
+.tag-outline{background:transparent;border:1px solid var(--color-accent);color:var(--color-accent)}
+
+/* nav */
+.topbar{position:sticky;top:0;z-index:50;background:var(--color-bg);border-bottom:2px solid var(--color-divider)}
+.nav{display:flex;align-items:center;gap:var(--s6);height:64px}
+.brand{display:flex;align-items:center;gap:var(--s3);text-decoration:none;color:var(--color-text);margin-right:auto;min-width:0}
+.brand img{width:36px;height:36px}
+.brand b{font-weight:800;font-size:15px;line-height:1.1;letter-spacing:-.01em}
+.brand span{display:block;font-size:11px;color:var(--muted);font-weight:400;letter-spacing:.02em}
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0}
+.nav-links > li{position:relative}
+.nav-links a,.nav-links button.drop{display:flex;align-items:center;gap:6px;height:64px;padding:0 10px;color:var(--color-text);text-decoration:none;font:600 14px var(--font);background:none;border:0;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px}
+.nav-links a:hover,.nav-links button.drop:hover,.nav-links a.active{color:var(--color-accent);border-bottom-color:var(--color-accent)}
+.dropdown{position:absolute;top:100%;right:0;min-width:300px;background:var(--color-white);border:2px solid var(--color-text);display:none;list-style:none;margin:0;padding:0;box-shadow:0 12px 32px color-mix(in srgb,#2d2b2b 22%,transparent)}
+.dropdown.open{display:block}
+.dropdown a{height:auto;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:2px 12px;border-bottom:1px solid var(--color-divider);margin:0}
+.dropdown li:last-child a{border-bottom:0}
+.dropdown a small{grid-column:1;font-weight:400;font-size:12px;color:var(--muted)}
+.dropdown a svg{grid-row:1/3;grid-column:2;align-self:center}
+.dropdown a:hover{background:var(--color-accent-100);border-bottom-color:var(--color-divider)}
+.dropdown .soon{padding:14px 16px;font-size:13px;color:var(--muted)}
+.nav-cta{height:40px}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--color-divider);background:none;cursor:pointer;align-items:center;justify-content:center;color:var(--color-text)}
+
+/* hero */
+.hero{border-bottom:2px solid var(--color-divider)}
+.hero-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));}
+.hero-main{grid-column:1/9;padding:var(--s16) var(--s8) var(--s12) 0;border-right:2px solid var(--color-divider)}
+.hero-side{grid-column:9/13;display:flex;flex-direction:column}
+.hero-edition{display:flex;align-items:baseline;gap:var(--s4);margin-bottom:var(--s8)}
+.hero-edition .num{font-size:96px;font-weight:800;line-height:.8;color:var(--color-accent);letter-spacing:-.05em}
+.hero-edition .lbl{font-size:15px;font-weight:600;line-height:1.3;max-width:28ch}
+.hero h1{font-size:clamp(44px,7vw,104px);letter-spacing:-.04em;line-height:.92;margin-bottom:var(--s6)}
+.hero h1 em{font-style:normal;color:var(--color-accent)}
+.hero .sub{font-size:clamp(19px,2vw,26px);font-weight:600;line-height:1.25;max-width:26ch;margin-bottom:var(--s8)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:var(--s3)}
+.cell{padding:var(--s6) 0 var(--s6) var(--s8);border-bottom:2px solid var(--color-divider)}
+.cell:last-child{border-bottom:0}
+.cell .kicker{margin-bottom:var(--s2);display:block}
+.cell .big{font-size:34px;font-weight:800;line-height:1;letter-spacing:-.02em}
+.cell .mid{font-size:20px;font-weight:800;line-height:1.15}
+.cell p{margin:6px 0 0;font-size:14px;color:var(--muted)}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:var(--s2)}
+.countdown div{border-left:1px solid var(--color-divider);padding-left:10px}
+.countdown div:first-child{border-left:0;padding-left:0}
+.countdown b{display:block;font-size:34px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.countdown span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* sections */
+section.block{border-bottom:2px solid var(--color-divider);padding:var(--s16) 0}
+.sec-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--s6);margin-bottom:var(--s12);align-items:end}
+.sec-head .idx{grid-column:1/3;font-size:14px;font-weight:600;color:var(--color-accent);letter-spacing:.08em}
+.sec-head h2{grid-column:3/10;font-size:clamp(34px,4.4vw,60px);letter-spacing:-.03em}
+.sec-head .aside{grid-column:10/13;display:flex;justify-content:flex-start}
+.body-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--s6)}
+.body-grid > .main{grid-column:3/13}
+
+/* fundamentacion */
+.lead{font-size:clamp(22px,2.4vw,30px);font-weight:600;line-height:1.25;letter-spacing:-.01em;grid-column:3/11;margin-bottom:var(--s8);text-wrap:pretty}
+.cols2{grid-column:3/13;columns:2;column-gap:var(--s12);column-rule:2px solid var(--color-divider)}
+.cols2 p{break-inside:avoid}
+
+/* ejes */
+.ejes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--color-text)}
+.eje{padding:var(--s6) var(--s6) var(--s8);border-right:2px solid var(--color-divider);display:flex;flex-direction:column;gap:var(--s3);transition:background .15s}
+.eje:first-child{padding-left:0}
+.eje:last-child{border-right:0;padding-right:0}
+.eje .n{font-size:72px;font-weight:800;line-height:.9;color:var(--color-accent);letter-spacing:-.05em}
+.eje h3{font-size:21px;line-height:1.15}
+.eje p{font-size:14.5px;color:var(--muted);margin:0}
+
+/* cronograma */
+.prog{width:100%;border-collapse:collapse}
+.prog th{text-align:left;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:0 var(--s4) var(--s3) 0;border-bottom:2px solid var(--color-text)}
+.prog td{padding:var(--s4) var(--s4) var(--s4) 0;border-bottom:1px solid var(--color-divider);vertical-align:top}
+.prog tr:hover td{background:color-mix(in srgb,var(--color-text) 3%,transparent)}
+.prog .t{white-space:nowrap;font-weight:800;font-variant-numeric:tabular-nums;font-size:17px;width:170px}
+.prog .t small{display:block;font-weight:400;font-size:12px;color:var(--muted)}
+.prog .type{width:150px}
+.prog .ev{font-weight:800;font-size:17px;line-height:1.25}
+.prog .det{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin-top:8px;font-size:13.5px}
+.prog .det dt{color:var(--muted)}
+.prog .det dd{margin:0}
+.tbc{color:var(--muted);font-style:italic}
+.prog tr.pause td{background:var(--color-surface)}
+.prog tr.pause .ev{font-weight:600}
+.note{display:flex;gap:var(--s3);align-items:flex-start;margin-top:var(--s6);font-size:14px;color:var(--muted)}
+
+/* participar */
+.part-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0;border-top:2px solid var(--color-text)}
+.part-col{padding:var(--s6) var(--s8) var(--s6) 0}
+.part-col + .part-col{border-left:2px solid var(--color-divider);padding-left:var(--s8)}
+.part-col h3{font-size:24px;margin-bottom:var(--s4)}
+.part-col h4{font-size:17px;margin:var(--s4) 0 var(--s1)}
+.list{list-style:none;margin:0;padding:0}
+.list li{padding:10px 0;border-bottom:1px solid var(--color-divider);font-size:14.5px}
+.list li:last-child{border-bottom:0}
+.list li b{font-weight:800}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0 0 var(--s4)}
+.steps li{counter-increment:s;display:grid;grid-template-columns:36px 1fr;padding:10px 0;border-bottom:1px solid var(--color-divider);font-size:14.5px}
+.steps li::before{content:counter(s);font-weight:800;color:var(--color-accent);font-size:20px;line-height:1.1}
+.callout{background:var(--color-accent-100);padding:var(--s4);font-size:14px;color:var(--color-accent-800);margin:var(--s4) 0}
+.callout b{font-weight:800}
+.stack{display:flex;flex-direction:column;gap:var(--s2);margin-top:var(--s4)}
+
+/* fechas */
+.dates{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));border-top:2px solid var(--color-text)}
+.date{grid-column:span 6;padding:var(--s6) var(--s6) var(--s6) 0;display:grid;grid-template-columns:auto 1fr;gap:var(--s6);align-items:center}
+.date + .date{border-left:2px solid var(--color-divider);padding-left:var(--s6)}
+.date .d{font-size:88px;font-weight:800;line-height:.85;letter-spacing:-.05em;color:var(--color-accent)}
+.date .m{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.date .w{font-size:20px;font-weight:800;line-height:1.2;margin-top:6px}
+.date .left{font-size:13px;color:var(--muted);margin-top:4px}
+.date.past .d{color:var(--color-text);opacity:.35}
+
+/* instituciones */
+.logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--color-text);border-left:1px solid var(--color-divider)}
+.logo{background:var(--color-white);border-right:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);min-height:170px;display:flex;flex-direction:column;justify-content:space-between;padding:var(--s4)}
+.logo .img{flex:1;display:flex;align-items:center;justify-content:center;padding:var(--s3) var(--s2)}
+.logo img{max-height:84px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.9;transition:filter .2s,opacity .2s}
+.logo:hover img{filter:none;opacity:1}
+.logo .cap{font-size:12px;line-height:1.3;color:var(--muted);border-top:1px solid var(--color-divider);padding-top:8px}
+.logo .txt{font-size:18px;font-weight:800;line-height:1.15;text-align:left;align-self:stretch}
+
+/* comites */
+.com{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));border-top:2px solid var(--color-text)}
+.com > div{grid-column:span 6;padding:var(--s6) var(--s8) 0 0}
+.com > div + div{border-left:2px solid var(--color-divider);padding-left:var(--s8)}
+.com h3{font-size:24px;margin-bottom:var(--s3)}
+.people li{display:grid;grid-template-columns:1fr;gap:2px}
+.people li b{font-size:16px}
+.people li span{font-size:13px;color:var(--muted)}
+
+/* ubicacion */
+.map-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));border-top:2px solid var(--color-text)}
+.map-info{grid-column:1/5;padding:var(--s6) var(--s8) var(--s6) 0;display:flex;flex-direction:column;gap:var(--s4)}
+.map-info .addr{font-size:28px;font-weight:800;line-height:1.1;letter-spacing:-.02em}
+.map-frame{grid-column:5/13;border-left:2px solid var(--color-divider);min-height:440px;position:relative;background:var(--color-surface)}
+.map-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) contrast(1.05)}
+.map-frame:hover iframe{filter:none}
+.transport li{display:grid;grid-template-columns:90px 1fr;gap:var(--s3);font-size:14px}
+.transport li b{font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+
+/* circulares */
+.circ{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--color-text)}
+.circ a,.circ .pending{display:flex;flex-direction:column;gap:var(--s2);padding:var(--s6) var(--s6) var(--s6) 0;text-decoration:none;color:var(--color-text);border-right:2px solid var(--color-divider);min-height:200px}
+.circ > * + *{padding-left:var(--s6)!important}
+.circ > *:last-child{border-right:0}
+.circ .n{font-size:56px;font-weight:800;line-height:.9;letter-spacing:-.04em;color:var(--color-accent)}
+.circ h3{font-size:22px}
+.circ a .go{margin-top:auto;display:flex;align-items:center;gap:8px;font-weight:800;font-size:14px;color:var(--color-accent)}
+.circ a:hover{background:var(--color-accent-100)}
+.circ .pending{color:var(--muted)}
+.circ .pending .n{color:var(--color-divider)}
+
+/* poster close */
+.poster{background:var(--color-accent);color:#fff;padding:var(--s16) 0}
+.poster-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--s6);align-items:end}
+.poster h2{grid-column:1/9;font-size:clamp(44px,6.5vw,96px);letter-spacing:-.04em;line-height:.92}
+.poster .act{grid-column:9/13;display:flex;flex-direction:column;gap:var(--s3)}
+.poster .act p{font-size:15px;color:#fff;margin:0}
+.poster a.mail{color:#fff;font-weight:800;font-size:18px;word-break:break-all}
+
+footer{padding:var(--s8) 0;font-size:13px;color:var(--muted)}
+.foot{display:flex;flex-wrap:wrap;gap:var(--s6);justify-content:space-between;align-items:center}
+.foot-logos{display:flex;gap:var(--s4);align-items:center;flex-wrap:wrap}
+.foot-logos img{height:36px;width:auto;filter:grayscale(1);opacity:.75}
+
+/* responsive */
+@media (max-width:1100px){
+  .nav-links a,.nav-links button.drop{padding:0 7px;font-size:13px}
+  .brand span{display:none}
+}
+@media (max-width:960px){
+  .burger{display:inline-flex}
+  .nav-cta{display:none}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--color-bg);border-bottom:2px solid var(--color-divider);padding:var(--s2) var(--s6) var(--s4)}
+  .nav-links.open{display:flex}
+  .nav-links a,.nav-links button.drop{height:48px;border-bottom:1px solid var(--color-divider);margin:0;width:100%;padding:0}
+  .dropdown{position:static;box-shadow:none;border:0;border-left:3px solid var(--color-accent);min-width:0}
+  .hero-main{grid-column:1/-1;border-right:0;padding:var(--s12) 0 var(--s8)}
+  .hero-side{grid-column:1/-1;border-top:2px solid var(--color-divider)}
+  .cell{padding-left:0}
+  .sec-head .idx,.sec-head h2,.sec-head .aside,.body-grid > .main,.lead,.cols2{grid-column:1/-1}
+  .cols2{columns:1}
+  .ejes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .eje:nth-child(2){border-right:0;padding-right:0}
+  .eje:nth-child(3){padding-left:0}
+  .eje:nth-child(n+3){border-top:2px solid var(--color-divider)}
+  .part-col{grid-column:1/-1!important;padding-right:0}
+  .part-col + .part-col{border-left:0;padding-left:0;border-top:2px solid var(--color-divider)}
+  .logos{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .com > div{grid-column:1/-1;padding-right:0}
+  .com > div + div{border-left:0;padding-left:0;border-top:2px solid var(--color-divider);margin-top:var(--s6)}
+  .map-info{grid-column:1/-1}
+  .map-frame{grid-column:1/-1;border-left:0;min-height:340px}
+  .circ{grid-template-columns:1fr}
+  .circ > *{border-right:0!important;border-bottom:2px solid var(--color-divider);padding-left:0!important;min-height:0}
+  .poster h2,.poster .act{grid-column:1/-1}
+  .prog .type{display:none}
+}
+@media (max-width:640px){
+  .wrap{padding:0 var(--s4)}
+  .ejes{grid-template-columns:1fr}
+  .eje{padding:var(--s6) 0!important;border-right:0!important;border-top:2px solid var(--color-divider)}
+  .eje:first-child{border-top:0}
+  .date{grid-column:1/-1;padding-right:0}
+  .date + .date{border-left:0;padding-left:0;border-top:2px solid var(--color-divider)}
+  .date .d{font-size:64px}
+  .prog .t{width:auto;font-size:15px}
+  .prog thead{display:none}
+  .prog tr{display:block;border-bottom:1px solid var(--color-divider);padding:var(--s3) 0}
+  .prog td{display:block;border:0;padding:0}
+  .hero-edition .num{font-size:72px}
+  .countdown b{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="#inicio" aria-label="Inicio">
+      <img src="assets/logo-apuba.jpg" alt="APUBA">
+      <div><b>2.° Congreso de Enfermería</b><span>Hospitales Universitarios · UBA</span></div>
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#fundamentacion">Fundamentación</a></li>
+      <li><a href="#ejes">Temario</a></li>
+      <li><a href="#cronograma">Cronograma</a></li>
+      <li><a href="#participar">Participar</a></li>
+      <li><a href="#instituciones">Instituciones</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+      <li>
+        <button class="drop" id="dropBtn" aria-expanded="false" aria-haspopup="true">Circulares
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <ul class="dropdown" id="dropdown">
+          <li><a href="primera-circular.html" target="_blank" rel="noopener"><span>Primera circular</span><small>Octubre 2026 · convocatoria y pósteres</small>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a></li>
+          <li class="soon">Segunda circular — próximamente</li>
+        </ul>
+      </li>
+    </ul>
+    <a class="btn btn-primary nav-cta" href="https://forms.gle/W51KAWTxV3yG5sHf7" target="_blank" rel="noopener">Inscribite
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div class="hero-main">
+      <div class="hero-edition"><span class="num">2.°</span><span class="lbl">Congreso de Enfermería de los Hospitales Universitarios de la Universidad de Buenos Aires</span></div>
+      <h1>Docencia, ciencia <em>y asistencia</em></h1>
+      <p class="sub">El triple compromiso de la Enfermería universitaria.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary btn-wide" href="https://forms.gle/W51KAWTxV3yG5sHf7" target="_blank" rel="noopener">Inscribite acá
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-secondary btn-wide" href="primera-circular.html" target="_blank" rel="noopener">Leer la primera circular
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></a>
+      </div>
+    </div>
+    <aside class="hero-side">
+      <div class="cell">
+        <span class="kicker">Fecha</span>
+        <div class="big">18 de noviembre</div>
+        <p>Miércoles · 2026 · 08:00 a 17:30 hs</p>
+      </div>
+      <div class="cell">
+        <span class="kicker">Lugar</span>
+        <div class="mid">Facultad de Ciencias Médicas, UBA</div>
+        <p>Paraguay 2155, Ciudad Autónoma de Buenos Aires · <a href="#ubicacion">Ver mapa</a></p>
+      </div>
+      <div class="cell">
+        <span class="kicker" id="cdLabel">Faltan</span>
+        <div class="countdown" id="countdown">
+          <div><b id="cd-d">--</b><span>días</span></div>
+          <div><b id="cd-h">--</b><span>horas</span></div>
+          <div><b id="cd-m">--</b><span>min</span></div>
+          <div><b id="cd-s">--</b><span>seg</span></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="block" id="fechas" style="padding:var(--s12) 0">
+  <div class="wrap">
+    <div class="dates">
+      <div class="date" data-date="2026-10-18T23:59:59-03:00">
+        <span class="d">18</span>
+        <div><div class="m">Octubre 2026</div><div class="w">Plazo máximo para presentar los pósteres</div><div class="left" data-left></div></div>
+      </div>
+      <div class="date" data-date="2026-11-18T08:00:00-03:00">
+        <span class="d">18</span>
+        <div><div class="m">Noviembre 2026</div><div class="w">Realización del Congreso</div><div class="left" data-left></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="fundamentacion">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">01 — Fundamentación</span><h2>Un espacio propio para la Enfermería universitaria</h2></div>
+    <div class="body-grid">
+      <p class="lead">La profesión de Enfermería ocupa un lugar central en el cuidado de la salud y constituye uno de los pilares esenciales de los Hospitales Universitarios.</p>
+      <div class="cols2">
+        <p>Su aporte se expresa en la atención directa y continua de las personas, la prevención de enfermedades, la educación para la salud, el acompañamiento de pacientes y familias y la articulación con los distintos equipos de atención. A su vez, participa en la formación, la investigación y el desarrollo de prácticas que contribuyen a mejorar la calidad del cuidado.</p>
+        <p>En este marco, resulta indispensable generar un espacio propio para reconocer, compartir y fortalecer los conocimientos y experiencias construidos por quienes desarrollan esta tarea, poniendo en valor el saber de Enfermería y su aporte indispensable al funcionamiento de los Institutos Asistenciales.</p>
+        <p>El Congreso propone ser un ámbito de encuentro, intercambio y formación, donde los/as trabajadores/as del equipo de Enfermería asuman un rol protagónico en el debate sobre el cuidado, las prácticas profesionales, la producción de conocimiento científico basado en evidencia y los desafíos que atraviesa el sistema de salud.</p>
+        <p>Desde una mirada que articula trabajo, formación académica y organización sindical, buscamos fortalecer la identidad NODOCENTE y el protagonismo de la profesión dentro de la comunidad universitaria. Jerarquizar Enfermería también implica reconocer el valor de quienes la ejercen, promover su participación en los ámbitos institucionales y gremiales, y mejorar el desarrollo de prácticas de cuidado de calidad.</p>
+        <p>Esta instancia formativa se propone construir colectivamente un mayor reconocimiento y participación, reafirmando el compromiso irrenunciable con las y los trabajadores de la salud pública y la educación universitaria de excelencia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="ejes">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">02 — Temario</span><h2>Ejes temáticos</h2><div class="aside"><span class="tag" id="temarioTag">Temario preliminar</span></div></div>
+    <div class="ejes">
+      <article class="eje"><span class="n">1</span><h3>Transformaciones del cuidado y humanización</h3><p>Atención integral, segura y centrada en las personas: modelos de cuidado, humanización, bioética, derechos del paciente y preservación del vínculo humano ante los cambios tecnológicos.</p></article>
+      <article class="eje"><span class="n">2</span><h3>Enfermería universitaria, formación e investigación</h3><p>La Enfermería como disciplina científica: formación de grado y posgrado, educación continua, investigación, práctica basada en evidencia, simulación clínica y rol estratégico de los hospitales universitarios.</p></article>
+      <article class="eje"><span class="n">3</span><h3>Nuevos desafíos de la salud y el cuidado</h3><p>Cambios epidemiológicos, demográficos y ambientales: envejecimiento, salud mental, cuidados paliativos, emergencias y vulnerabilidad social, con la Enfermería como articuladora comunitaria.</p></article>
+      <article class="eje"><span class="n">4</span><h3>Innovación, tecnologías e inteligencia artificial</h3><p>Impacto de la IA y las tecnologías digitales en la práctica y la gestión (teleenfermería, historia clínica electrónica, ciberseguridad) y los límites de la automatización frente a la empatía y la presencia humana.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="cronograma">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">03 — Cronograma</span><h2>Miércoles 18 de noviembre</h2><div class="aside"><span class="tag tag-outline">Preliminar</span></div></div>
+    <table class="prog" id="prog">
+      <thead><tr><th>Horario</th><th class="type">Formato</th><th>Actividad</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <p class="note"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex:none;margin-top:2px"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>Los títulos, moderadores/as y disertantes se confirmarán en la próxima circular.</p>
+  </div>
+</section>
+
+<section class="block" id="participar">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">04 — Participar</span><h2>Convocatoria y pósteres</h2></div>
+    <div class="part-grid">
+      <div class="part-col" style="grid-column:span 4">
+        <h3>Actividades</h3>
+        <ul class="list">
+          <li><b>Ponencias centrales</b>, a cargo de los hospitales e institutos universitarios, el Instituto Superior FACULTAR y la Facultad de Medicina de la UBA.</li>
+          <li><b>Talleres prácticos simultáneos</b>, organizados por cada institución.</li>
+          <li><b>Presentación de pósteres</b> de trabajos de investigación, reportes de caso y experiencias, enmarcados en los ejes temáticos.</li>
+        </ul>
+      </div>
+      <div class="part-col" style="grid-column:span 4">
+        <h3>Modalidades</h3>
+        <ul class="list">
+          <li><b>Asistente.</b> Participa de las ponencias centrales, los talleres prácticos y la sesión de pósteres.</li>
+          <li><b>Expositor/a de pósteres.</b> Presenta un trabajo en formato póster en la categoría Estudiante o Profesional, enmarcado en uno de los cuatro ejes temáticos.</li>
+        </ul>
+        <div class="callout">Ambas modalidades requieren <b>inscripción previa</b>.</div>
+        <a class="btn btn-primary btn-wide" href="https://forms.gle/W51KAWTxV3yG5sHf7" target="_blank" rel="noopener" style="width:100%">Formulario de inscripción
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="part-col" style="grid-column:span 4">
+        <h3>Pósteres</h3>
+        <p style="font-size:14.5px">Quienes participen como expositores/as pueden elegir:</p>
+        <ol class="steps">
+          <li>Inscribirse ahora enviando el resumen y presentar el póster más adelante, dentro del plazo.</li>
+          <li>Enviar el resumen y el póster juntos en una sola presentación.</li>
+        </ol>
+        <div class="callout"><b>Plazo máximo: 18 de octubre de 2026.</b> Los pósteres pasan por revisión y evaluación del Comité Científico: cuanto antes se envíen, mejor.</div>
+        <h4>Apartados del póster</h4>
+        <ul class="list">
+          <li><b>Encabezado:</b> título, autores/as, institución y eje temático.</li>
+          <li><b>Introducción y objetivos</b></li>
+          <li><b>Metodología:</b> diseño, población, ámbito o estrategia de intervención.</li>
+          <li><b>Desarrollo / resultados</b></li>
+          <li><b>Conclusiones / consideraciones finales</b></li>
+          <li><b>Referencias bibliográficas</b> (formato APA sugerido).</li>
+        </ul>
+        <div class="stack">
+          <a class="btn btn-secondary btn-wide" href="https://docs.google.com/presentation/d/1ZQFisu6cjJ0aPDZNrpcpgnD8gW7NOylT/edit?usp=drive_link&amp;ouid=114707393747987572523&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener" style="width:100%">Descargar plantilla oficial
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="instituciones">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">05 — Instituciones</span><h2>Organizan</h2></div>
+    <div class="logos">
+      <div class="logo"><div class="img"><img src="assets/logo-apuba.jpg" alt="APUBA"></div><div class="cap">APUBA — Secretaría Asistencial y Secretaría de Capacitación y Cultura</div></div>
+      <div class="logo"><div class="img"><img src="assets/logo-clinicas.png" alt="Hospital de Clínicas"></div><div class="cap">Hospital de Clínicas “José de San Martín”</div></div>
+      <div class="logo"><div class="img"><img src="assets/logo-roffo.png" alt="Instituto Roffo"></div><div class="cap">Instituto de Oncología “Ángel H. Roffo”</div></div>
+      <div class="logo"><div class="img"><img src="assets/logo-lanari-c.png" alt="Instituto Lanari"></div><div class="cap">Instituto de Investigaciones Médicas “Dr. Alfredo Lanari”</div></div>
+      <div class="logo"><div class="img"><div class="txt">Instituto de Tisioneumonología “Prof. Dr. Raúl Vacarezza”</div></div><div class="cap">Hospital Universitario · UBA</div></div>
+      <div class="logo"><div class="img"><img src="assets/logo-facultar.png" alt="Instituto Superior FACULTAR"></div><div class="cap">Instituto Superior FACULTAR (APUBA)</div></div>
+      <div class="logo"><div class="img"><img src="assets/logo-fcm.png" alt="Facultad de Ciencias Médicas UBA"></div><div class="cap">Dirección de la carrera de Enfermería, Facultad de Medicina</div></div>
+      <div class="logo"><div class="img"><img src="assets/logo-uba.png" alt="Universidad de Buenos Aires"></div><div class="cap">Universidad de Buenos Aires</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="comites">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">06 — Comités</span><h2>Quiénes lo hacen</h2></div>
+    <div class="com">
+      <div>
+        <h3>Comité Organizador</h3>
+        <ul class="list people">
+          <li><b>Ruben Ortiz</b><span>Subdelegado · Hospital de Clínicas “José de San Martín”</span></li>
+          <li><b>Paola Cardozo</b><span>Delegada Gral. · Instituto de Oncología “Ángel H. Roffo”</span></li>
+          <li><b>Gonzalo Bustos</b><span>Delegado Gral. · Instituto de Investigaciones Médicas “Dr. Alfredo Lanari”</span></li>
+          <li><b>Clarisa Da Silva</b><span>Delegada Gral. · Instituto de Tisioneumonología “Prof. Dr. Raúl Vacarezza”</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Comité Científico</h3>
+        <ul class="list people">
+          <li><b>Prof. Lic. Ricardo Molina</b><span>Director de Enfermería · Hospital de Clínicas “José de San Martín”</span></li>
+          <li><b>Lic. Mercedes Serrano</b><span>Directora de Enfermería · Instituto de Oncología “Ángel H. Roffo”</span></li>
+          <li><b>Lic. Enrique Dree</b><span>Director de Enfermería · Instituto de Tisioneumonología “Prof. Dr. Raúl Vacarezza”</span></li>
+          <li><b>Lic. Alberto Tulio</b><span>Director de Enfermería · Instituto de Investigaciones Médicas “Dr. Alfredo Lanari”</span></li>
+          <li><b>Lic. María Santini</b><span>Directora de la carrera Licenciatura en Enfermería · Facultad de Ciencias Médicas, UBA</span></li>
+          <li><b>Lic. Leandro Guerschberg</b><span>Rector · Instituto Superior FACULTAR</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="ubicacion">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">07 — Ubicación</span><h2>Facultad de Ciencias Médicas</h2></div>
+    <div class="map-grid">
+      <div class="map-info">
+        <span class="kicker">Dirección</span>
+        <div class="addr">Paraguay 2155<br>C1121ABG · CABA</div>
+        <p class="muted" style="margin:0">Universidad de Buenos Aires · Barrio de Recoleta, frente a Plaza Houssay.</p>
+        <ul class="list transport">
+          <li><b>Subte</b><span>Línea D — estación Facultad de Medicina</span></li>
+          <li><b>Acceso</b><span>Acreditación con código QR desde las 08:00 hs</span></li>
+        </ul>
+        <a class="btn btn-secondary btn-wide" href="https://www.google.com/maps/search/?api=1&amp;query=Facultad+de+Ciencias+M%C3%A9dicas+UBA+Paraguay+2155+Buenos+Aires" target="_blank" rel="noopener">Abrir en Google Maps
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+      </div>
+      <div class="map-frame">
+        <iframe title="Mapa: Facultad de Ciencias Médicas UBA" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Facultad+de+Ciencias+M%C3%A9dicas+UBA,+Paraguay+2155,+Buenos+Aires&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="circulares">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">08 — Circulares</span><h2>Comunicaciones oficiales</h2></div>
+    <div class="circ">
+      <a href="primera-circular.html" target="_blank" rel="noopener">
+        <span class="n">01</span><h3>Primera circular</h3><span class="muted" style="font-size:14px">Octubre 2026 · Convocatoria, ejes, modalidades y presentación de pósteres.</span>
+        <span class="go">Abrir circular <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <div class="pending"><span class="n">02</span><h3>Segunda circular</h3><span style="font-size:14px">Próximamente · Programa definitivo y disertantes.</span></div>
+      <div class="pending"><span class="n">03</span><h3>Tercera circular</h3><span style="font-size:14px">Próximamente.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="poster" id="contacto">
+  <div class="wrap poster-grid">
+    <h2>Los/as esperamos el 18 de noviembre.</h2>
+    <div class="act">
+      <a class="btn btn-inverse btn-wide" href="https://forms.gle/W51KAWTxV3yG5sHf7" target="_blank" rel="noopener">Inscribite acá
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p>Consultas</p>
+      <a class="mail" href="mailto:cehu.inscripciones@gmail.com">cehu.inscripciones@gmail.com</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>Comité Organizador y Comité Científico · 2.° Congreso de Enfermería de los Hospitales Universitarios de la UBA</div>
+    <div class="foot-logos">
+      <img src="assets/logo-apuba.jpg" alt="APUBA">
+      <img src="assets/logo-uba.png" alt="UBA">
+      <img src="assets/logo-facultar.png" alt="FACULTAR">
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Cronograma — completar campos cuando estén confirmados (reemplazar null por el texto)
+  var TBC='A confirmar';
+  var prog=[
+    {t:'08:00 – 09:00',d:60,f:'',ev:'Acreditación (código QR)',p:1},
+    {t:'09:00 – 09:30',d:30,f:'',ev:'Apertura del Congreso'},
+    {t:'09:30 – 10:10',d:40,f:'Mesa redonda',ev:'Hospital de Clínicas “José de San Martín”',x:{titulo:null,moderador:null,disertantes:null}},
+    {t:'10:10 – 10:50',d:40,f:'Mesa redonda',ev:'Instituto de Oncología “Ángel H. Roffo”',x:{titulo:null,moderador:null,disertantes:null}},
+    {t:'10:50 – 11:20',d:30,f:'',ev:'Café / Break',p:1},
+    {t:'11:20 – 12:00',d:40,f:'Mesa redonda',ev:'Instituto de Investigaciones Médicas “Dr. Alfredo Lanari”',x:{titulo:null,moderador:null,disertantes:null}},
+    {t:'12:00 – 12:40',d:40,f:'Mesa redonda',ev:'Instituto de Tisioneumonología “Prof. Dr. Raúl Vacarezza”',x:{titulo:null,moderador:null,disertantes:null}},
+    {t:'12:40 – 13:40',d:60,f:'',ev:'Receso / Almuerzo',p:1},
+    {t:'13:40 – 14:40',d:60,f:'Talleres',ev:'Talleres simultáneos a cargo de cada Instituto'},
+    {t:'14:40 – 15:20',d:40,f:'Simposio',ev:'Instituto Superior FACULTAR',x:{titulo:null,moderador:null,disertantes:null}},
+    {t:'15:20 – 16:00',d:40,f:'Simposio',ev:'Facultad de Medicina (UBA)',x:{titulo:null,moderador:null,disertantes:null}},
+    {t:'16:00 – 16:30',d:30,f:'',ev:'Café / Break',p:1},
+    {t:'16:30 – 17:10',d:40,f:'Conclusión',ev:'Directores/as de los Hospitales Universitarios',x:{titulo:null}},
+    {t:'17:10',d:null,f:'',ev:'Sorteos y cierre oficial'}
+  ];
+  var L={titulo:'Disertación',moderador:'Moderador/a',disertantes:'Disertante/s'};
+  var tb=document.querySelector('#prog tbody'),h='';
+  prog.forEach(function(r){
+    var det='';
+    if(r.x){det='<dl class="det">';for(var k in r.x){var v=r.x[k];det+='<dt>'+L[k]+'</dt><dd'+(v?'':' class="tbc"')+'>'+(v||TBC)+'</dd>';}det+='</dl>';}
+    h+='<tr'+(r.p?' class="pause"':'')+'><td class="t">'+r.t+' hs'+(r.d?'<small>'+r.d+' min</small>':'')+'</td><td class="type">'+(r.f?'<span class="tag">'+r.f+'</span>':'')+'</td><td><div class="ev">'+(r.f?'<span class="muted" style="font-weight:600">'+r.f+': </span>':'')+r.ev+'</div>'+det+'</td></tr>';
+  });
+  tb.innerHTML=h;
+
+  // Countdown
+  var target=new Date('2026-11-18T08:00:00-03:00').getTime();
+  function pad(n){return String(n).padStart(2,'0')}
+  function tick(){
+    var diff=target-Date.now();
+    if(diff<=0){document.getElementById('cdLabel').textContent='¡El Congreso ya comenzó!';document.getElementById('countdown').style.display='none';return;}
+    var s=Math.floor(diff/1000);
+    document.getElementById('cd-d').textContent=Math.floor(s/86400);
+    document.getElementById('cd-h').textContent=pad(Math.floor(s%86400/3600));
+    document.getElementById('cd-m').textContent=pad(Math.floor(s%3600/60));
+    document.getElementById('cd-s').textContent=pad(s%60);
+  }
+  tick();setInterval(tick,1000);
+
+  document.querySelectorAll('.date').forEach(function(el){
+    var d=Math.ceil((new Date(el.dataset.date)-Date.now())/86400000),o=el.querySelector('[data-left]');
+    if(d<0){el.classList.add('past');o.textContent='Plazo cumplido';}
+    else o.textContent=d===0?'¡Es hoy!':'Faltan '+d+' día'+(d===1?'':'s');
+  });
+
+  // Menú móvil y desplegable
+  var burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+  burger.addEventListener('click',function(){var o=links.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+  links.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');burger.setAttribute('aria-expanded',false)})});
+  var db=document.getElementById('dropBtn'),dd=document.getElementById('dropdown');
+  db.addEventListener('click',function(e){e.stopPropagation();var o=dd.classList.toggle('open');db.setAttribute('aria-expanded',o)});
+  document.addEventListener('click',function(e){if(!dd.contains(e.target)){dd.classList.remove('open');db.setAttribute('aria-expanded',false)}});
+
+  // Sección activa
+  var navA=[].slice.call(links.querySelectorAll('a[href^="#"]'));
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){navA.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});
+  navA.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)io.observe(s)});
+})();
+</script>
+</body>
+</html>
