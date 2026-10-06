@@ -4,149 +4,148 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Primera circular · 2.° Congreso de Enfermería · UBA 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#262954">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f3f2f2;--paper:#fff;--text:#201e1d;--div:color-mix(in srgb,#201e1d 40%,transparent);--acc:#036636;--acc100:#eef7f1;--acc600:#02552d;--acc800:#03361d;--muted:color-mix(in srgb,#201e1d 62%,transparent);--font:"Archivo",system-ui,sans-serif}
+:root{--navy:#262954;--orange:#ee891d;--orange-600:#c96f0c;--green:#028037;--green-600:#016a2d;--green-100:#e6f3eb;--bg:#eef0f5;--paper:#fff;--text:#262954;--div:color-mix(in srgb,#262954 20%,transparent);--muted:color-mix(in srgb,#262954 70%,transparent);--serif:"Lora",Georgia,serif;--font:"Titillium Web",system-ui,sans-serif}
 *,*::before,*::after{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--font)}
-a{color:var(--acc);text-underline-offset:3px;font-weight:600}a:hover{color:var(--acc600)}
-:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
-h1,h2,h3{font-weight:800;line-height:1.1;letter-spacing:-.02em;margin:0}
+body{margin:0;background:var(--bg);color:var(--text);font:16.5px/1.6 var(--font)}
+a{color:var(--green);text-underline-offset:3px;font-weight:700}a:hover{color:var(--green-600)}
+:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+h1,h2,h3{line-height:1.15;margin:0}
 p{margin:0 0 12px;text-wrap:pretty}
-.bar{position:sticky;top:0;background:var(--bg);border-bottom:2px solid var(--div);z-index:5}
-.bar .in{max-width:900px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:12px}
-.bar .t{margin-right:auto;font-weight:800;font-size:14px}
-.btn{display:inline-flex;align-items:center;gap:8px;font:800 14px var(--font);padding:9px 14px;border:1px solid var(--div);background:none;color:var(--text);text-decoration:none;cursor:pointer}
-.btn:hover{background:color-mix(in srgb,var(--text) 7%,transparent);color:var(--text)}
-.btn-p{background:var(--acc);color:#fff;border-color:var(--acc)}.btn-p:hover{background:var(--acc600);color:#fff}
-.doc{max-width:900px;margin:32px auto 64px;background:var(--paper);border-top:8px solid var(--acc);padding:56px 64px}
-.head{border-bottom:2px solid var(--text);padding-bottom:28px;margin-bottom:28px}
-.k{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);display:block;margin-bottom:12px}
-.head h1{font-size:40px;letter-spacing:-.03em;margin-bottom:16px}
-.head .sub{font-size:20px;font-weight:600;line-height:1.3;margin-bottom:24px}
-.meta{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--div)}
-.meta div{padding:12px 0}.meta div+div{border-left:1px solid var(--div);padding-left:16px}
-.meta b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
-.meta span{font-weight:800;font-size:17px}
-.org{font-size:14px;color:var(--muted)}
-.place{font-size:14px;text-align:left;color:var(--muted);margin-top:8px}
-section{padding:24px 0;border-bottom:2px solid var(--div)}
+.bar{position:sticky;top:0;background:var(--navy);border-bottom:3px solid var(--green);z-index:5}
+.bar .in{max-width:900px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:10px}
+.bar .t{margin-right:auto;font-family:var(--serif);font-weight:700;font-size:15px;color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;font:700 14px var(--font);padding:8px 14px;border:2px solid rgba(255,255,255,.5);background:none;color:#fff;text-decoration:none;cursor:pointer}
+.btn:hover{background:#fff;color:var(--navy)}
+.btn-p{background:var(--green);border-color:var(--green)}.btn-p:hover{background:var(--green-600);border-color:var(--green-600);color:#fff}
+.doc{max-width:900px;margin:32px auto 64px;background:var(--paper);box-shadow:0 8px 30px rgba(38,41,84,.08)}
+.banner{display:block;width:100%;height:auto}
+.inner{padding:40px 64px 56px}
+.head{border-bottom:2px solid var(--navy);padding-bottom:24px;margin-bottom:8px}
+.k{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:10px}
+.meta{font-weight:700;font-size:18px;line-height:1.45;margin-bottom:16px}
+.org{font-size:15px}
+.org b{color:var(--orange);letter-spacing:.1em;text-transform:uppercase}
+.place{font-size:15px;color:var(--muted);margin-top:8px}
+section{padding:26px 0;border-bottom:1px solid var(--div)}
 section:last-of-type{border-bottom:0}
-section h2{font-size:24px;margin-bottom:14px;display:grid;grid-template-columns:44px 1fr}
-section h2 i{font-style:normal;color:var(--acc);font-size:14px;letter-spacing:.06em;padding-top:6px}
-.ind{padding-left:44px}
+section h2{font-family:var(--font);font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:14px}
 .ejes{list-style:none;padding:0;margin:0}
-.ejes li{display:grid;grid-template-columns:44px 1fr;padding:12px 0;border-top:1px solid var(--div)}
-.ejes li span{font-size:28px;font-weight:800;color:var(--acc);line-height:1}
-.ejes li b{display:block}
-ul.b{margin:0;padding:0;list-style:none}
-ul.b li{padding:8px 0 8px 18px;border-top:1px solid var(--div);position:relative}
-ul.b li::before{content:"";position:absolute;left:0;top:17px;width:8px;height:8px;background:var(--acc)}
-.note{background:var(--acc100);color:var(--acc800);padding:14px 16px;margin:14px 0;font-size:15px}
+.ejes li{display:grid;grid-template-columns:76px 1fr;gap:18px;padding:10px 0;align-items:start}
+.ejes .badge{width:76px;height:76px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;line-height:.95}
+.ejes .badge small{font-size:16px}.ejes .badge span{font-size:32px}
+.b1{background:var(--navy);color:var(--orange)}.b2{background:var(--orange);color:var(--green)}.b3{background:var(--green);color:var(--navy)}.b4{background:var(--navy);color:var(--green)}
+.ejes li b{font-weight:700}
+ul.b{margin:0;padding:0 0 0 24px;list-style:none}
+ul.b li{padding:6px 0}
+.mod{display:grid;grid-template-columns:84px 1fr;gap:18px;align-items:center;margin:10px 0 14px}
+.mod img{width:84px;height:84px}
+.mod b{display:block;font-size:20px;color:var(--green)}
+.mod.navy b{color:var(--navy)}
+.note{background:var(--green-100);border-left:4px solid var(--green);color:#015524;padding:14px 16px;margin:14px 0;font-size:15.5px}
+.opts{margin:0 0 12px;padding-left:24px;font-weight:700}
+.opts li{padding:4px 0}
 .fechas{width:100%;border-collapse:collapse;margin:12px 0}
 .fechas td{padding:10px 0;border-top:1px solid var(--div);vertical-align:top}
-.fechas td:first-child{font-weight:800;width:220px;color:var(--acc)}
-.sign{margin-top:28px;font-weight:600}
-.sign big{display:block;font-size:26px;font-weight:800;margin-bottom:6px}
-@media(max-width:700px){.doc{padding:32px 20px;margin:0}.head h1{font-size:30px}.meta{grid-template-columns:1fr}.meta div+div{border-left:0;padding-left:0;border-top:1px solid var(--div)}.ind,section h2{padding-left:0}section h2{grid-template-columns:36px 1fr}.fechas td:first-child{width:auto;display:block;border-top:1px solid var(--div)}.fechas td{display:block}.fechas td+td{border-top:0;padding-top:0}.bar .t{display:none}}
-@media print{.bar{display:none}body{background:#fff}.doc{margin:0;padding:0;max-width:none;border-top:0}section{break-inside:avoid}}
+.fechas tr:first-child td{border-top:0}
+.fechas td:first-child{font-weight:700;width:160px;color:var(--green);font-size:18px}
+.sign{margin-top:28px;font-weight:700}
+.sign big{display:block;font-family:var(--serif);font-size:26px;margin-bottom:6px}
+.big-cta{font-size:22px;letter-spacing:.02em}
+@media(max-width:700px){.doc{margin:0}.inner{padding:24px 18px 40px}.ejes li{grid-template-columns:60px 1fr;gap:12px}.ejes .badge{width:60px;height:60px}.ejes .badge span{font-size:25px}.ejes .badge small{font-size:13px}.fechas td{display:block}.fechas td:first-child{width:auto;padding-bottom:0}.fechas td+td{border-top:0;padding-top:2px}.bar .t{display:none}.mod{grid-template-columns:64px 1fr}.mod img{width:64px;height:64px}}
+@media print{.bar{display:none}body{background:#fff}.doc{margin:0;max-width:none;box-shadow:none}.inner{padding:24px 0 0}section{break-inside:avoid}}
 </style>
 </head>
 <body>
 <div class="bar"><div class="in">
   <span class="t">Primera circular</span>
   <a class="btn" href="index.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Volver al sitio</a>
-  <button class="btn btn-p" onclick="window.print()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>Imprimir / PDF</button>
+  <a class="btn btn-p" href="docs/primera-circular.pdf" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Descargar PDF</a>
 </div></div>
 
 <article class="doc">
+  <img class="banner" src="assets/encabezado-congreso.png" width="2480" height="776" alt="2.° Congreso de Enfermería de los Hospitales Universitarios de la Universidad de Buenos Aires. Docencia, ciencia y asistencia: el triple compromiso de la enfermería universitaria">
+  <div class="inner">
   <header class="head">
     <span class="k">Primera circular</span>
-    <h1>2.° Congreso de Enfermería de los Hospitales Universitarios de la UBA</h1>
-    <p class="sub">Docencia, ciencia y asistencia: el triple compromiso de la Enfermería universitaria</p>
-    <div class="meta">
-      <div><b>Fecha</b><span>18 de noviembre de 2026</span></div>
-      <div><b>Lugar</b><span>Facultad de Ciencias Médicas, UBA</span></div>
-    </div>
-    <p class="org" style="margin-top:16px"><b>Organizan:</b> APUBA (Secretaría Asistencial y Secretaría de Capacitación y Cultura), Hospital de Clínicas "José de San Martín", Instituto de Oncología "Ángel H. Roffo", Instituto de Tisioneumonología "Prof. Dr. Raúl Vacarezza", Instituto de Investigaciones Médicas "Dr. Alfredo Lanari", Instituto Superior FACULTAR y Dirección de la carrera de Enfermería de la Facultad de Medicina de la UBA.</p>
+    <p class="meta">Miércoles 18 de noviembre de 2026<br>Facultad de Ciencias Médicas, Universidad de Buenos Aires</p>
+    <p class="org"><b>Organizan:</b> APUBA (Secretaría Asistencial y Secretaría de Capacitación y Cultura), Hospital de Clínicas "José de San Martín", Instituto de Oncología "Ángel H. Roffo", Instituto de Tisioneumonología "Prof. Dr. Raúl Vacarezza", Instituto de Investigaciones Médicas "Dr. Alfredo Lanari", Instituto Superior FACULTAR y Dirección de la carrera de Enfermería de la Facultad de Medicina de la UBA.</p>
     <p class="place">Buenos Aires, octubre de 2026</p>
   </header>
 
   <section>
-    <h2><i>01</i>Convocatoria</h2>
-    <div class="ind">
-      <p>Invitamos a la comunidad de Enfermería de los Hospitales Universitarios de la UBA y de las instituciones educativas públicas y privadas afines a participar del 2.° Congreso de Enfermería de los Hospitales Universitarios de la Universidad de Buenos Aires.</p>
-      <p>El Congreso es un espacio de encuentro, intercambio y formación para que quienes integran el equipo de Enfermería compartan sus saberes, investigaciones y experiencias. Buscamos poner en valor el aporte de la profesión al cuidado, a la formación y a la producción de conocimiento basado en evidencia, y fortalecer su protagonismo dentro de la comunidad universitaria.</p>
-    </div>
+    <h2>Convocatoria</h2>
+    <p>Invitamos a la comunidad de Enfermería de los Hospitales Universitarios de la UBA y de las instituciones educativas públicas y privadas afines a participar del <b>2.° Congreso de Enfermería de los Hospitales Universitarios de la Universidad de Buenos Aires.</b></p>
+    <p>El Congreso es un espacio de encuentro, intercambio y formación para que quienes integran el equipo de Enfermería compartan sus saberes, investigaciones y experiencias. Buscamos poner en valor el aporte de la profesión al cuidado, a la formación y a la producción de conocimiento basado en evidencia, y fortalecer su protagonismo dentro de la comunidad universitaria.</p>
   </section>
 
   <section>
-    <h2><i>02</i>Ejes temáticos</h2>
-    <ul class="ejes ind">
-      <li><span>1</span><div><b>Transformaciones del cuidado y humanización.</b> Atención integral, segura y centrada en las personas: modelos de cuidado, humanización, bioética, derechos del paciente y preservación del vínculo humano ante los cambios tecnológicos.</div></li>
-      <li><span>2</span><div><b>Enfermería universitaria, formación e investigación.</b> La Enfermería como disciplina científica: formación de grado y posgrado, educación continua, investigación, práctica basada en evidencia, simulación clínica y rol estratégico de los hospitales universitarios.</div></li>
-      <li><span>3</span><div><b>Nuevos desafíos de la salud y el cuidado.</b> Cambios epidemiológicos, demográficos y ambientales: envejecimiento, salud mental, cuidados paliativos, emergencias y vulnerabilidad social, con la Enfermería como articuladora comunitaria.</div></li>
-      <li><span>4</span><div><b>Innovación, tecnologías e inteligencia artificial.</b> Impacto de la IA y las tecnologías digitales en la práctica y la gestión (teleenfermería, historia clínica electrónica, ciberseguridad) y los límites de la automatización frente a la empatía y la presencia humana.</div></li>
+    <h2>Ejes temáticos</h2>
+    <ul class="ejes">
+      <li><div class="badge b1"><small>EJE</small><span>01</span></div><div><b>Transformaciones del cuidado y humanización.</b> Atención integral, segura y centrada en las personas: modelos de cuidado, humanización, bioética, derechos del paciente y preservación del vínculo humano ante los cambios tecnológicos.</div></li>
+      <li><div class="badge b2"><small>EJE</small><span>02</span></div><div><b>Enfermería universitaria, formación e investigación.</b> La Enfermería como disciplina científica: formación de grado y posgrado, educación continua, investigación, práctica basada en evidencia, simulación clínica y rol estratégico de los hospitales universitarios.</div></li>
+      <li><div class="badge b3"><small>EJE</small><span>03</span></div><div><b>Nuevos desafíos de la salud y el cuidado.</b> Cambios epidemiológicos, demográficos y ambientales: envejecimiento, salud mental, cuidados paliativos, emergencias y vulnerabilidad social, con la Enfermería como articuladora comunitaria.</div></li>
+      <li><div class="badge b4"><small>EJE</small><span>04</span></div><div><b>Innovación, tecnologías e inteligencia artificial.</b> Impacto de la IA y las tecnologías digitales en la práctica y la gestión (teleenfermería, historia clínica electrónica, ciberseguridad) y los límites de la automatización frente a la empatía y la presencia humana.</div></li>
     </ul>
   </section>
 
   <section>
-    <h2><i>03</i>Actividades</h2>
-    <div class="ind">
-      <p>La jornada incluirá:</p>
-      <ul class="b">
-        <li>Ponencias centrales, a cargo de los hospitales e institutos universitarios, el Instituto Superior FACULTAR y la Facultad de Medicina de la UBA.</li>
-        <li>Talleres prácticos simultáneos, organizados por cada institución.</li>
-        <li>Presentación de pósteres de trabajos de investigación, reportes de caso y experiencias, enmarcados en los ejes temáticos.</li>
-      </ul>
-    </div>
+    <h2>Actividades</h2>
+    <p><b>La jornada incluirá:</b></p>
+    <ul class="b">
+      <li><b>Ponencias centrales</b>, a cargo de los hospitales e institutos universitarios, el Instituto Superior FACULTAR y la Facultad de Medicina de la UBA.</li>
+      <li><b>Talleres prácticos</b> simultáneos, organizados por cada institución.</li>
+      <li><b>Presentación de pósteres</b> de trabajos de investigación, reportes de caso y experiencias, enmarcados en los ejes temáticos.</li>
+    </ul>
   </section>
 
   <section>
-    <h2><i>04</i>Modalidades de participación</h2>
-    <div class="ind">
-      <p><b>Asistente.</b> Participa de las ponencias centrales, los talleres prácticos y la sesión de pósteres.</p>
-      <p><b>Expositor/a de pósteres.</b> Presenta un trabajo en formato póster en alguna de las dos categorías: Estudiante o Profesional. El trabajo debe enmarcarse en uno de los cuatro ejes temáticos.</p>
-      <p>Ambas modalidades requieren inscripción previa.</p>
-    </div>
+    <h2>Modalidades de participación</h2>
+    <div class="mod"><img src="assets/ico-asistente.png" alt=""><div><b>Asistente.</b>Participa de las ponencias centrales, los talleres prácticos y la sesión de pósteres.</div></div>
+    <div class="mod navy"><img src="assets/ico-expositor.png" alt=""><div><b>Expositor/a de pósteres.</b>Presenta un trabajo en formato póster en alguna de las dos categorías: <strong>Estudiante o Profesional.</strong> El trabajo debe enmarcarse en uno de los cuatro ejes temáticos.</div></div>
+    <p>Ambas modalidades requieren inscripción previa.</p>
   </section>
 
   <section>
-    <h2><i>05</i>Presentación de pósteres</h2>
-    <div class="ind">
-      <p>Quienes participen como expositores/as pueden elegir entre dos opciones:</p>
-      <ol style="padding-left:20px;margin:0 0 12px">
-        <li>Inscribirse ahora enviando el resumen y presentar el póster más adelante, dentro del plazo.</li>
-        <li>Enviar el resumen y el póster juntos en una sola presentación.</li>
-      </ol>
-      <p>El plazo máximo para presentar los pósteres es el <b>18 de octubre de 2026</b>.</p>
-      <div class="note"><b>NOTA:</b> Los pósteres pasan por una revisión y evaluación del comité académico. Por lo tanto, cuanto antes se envíen, mejor.</div>
-      <p>Los pósteres deben elaborarse con la plantilla oficial del Congreso, disponible para descargar en: <a href="https://docs.google.com/presentation/d/1ZQFisu6cjJ0aPDZNrpcpgnD8gW7NOylT/edit?usp=drive_link&amp;ouid=114707393747987572523&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Plantilla de póster</a></p>
-      <p>El diseño debe garantizar una lectura ágil, visual y ordenada, e incluir los siguientes apartados:</p>
-      <ul class="b">
-        <li><b>Encabezado:</b> título del trabajo, autores/as, institución y eje temático.</li>
-        <li><b>Introducción y objetivos:</b> breve contextualización del problema y propósito del trabajo o experiencia.</li>
-        <li><b>Metodología:</b> diseño, población, ámbito de estudio o estrategia de intervención.</li>
-        <li><b>Desarrollo / resultados:</b> hallazgos principales, datos relevantes o ejes de la experiencia.</li>
-        <li><b>Conclusiones / consideraciones finales:</b> reflexiones, aportes a la práctica profesional y proyecciones.</li>
-        <li><b>Referencias bibliográficas:</b> citas principales (formato APA sugerido).</li>
-      </ul>
-      <p style="margin-top:12px">Los trabajos serán evaluados por el Comité Científico.</p>
-    </div>
+    <h2>Presentación de pósteres</h2>
+    <p>Quienes participen como expositores/as pueden elegir entre dos opciones:</p>
+    <ol class="opts">
+      <li>Inscribirse ahora enviando el resumen y presentar el póster más adelante, dentro del plazo.</li>
+      <li>Enviar el resumen y el póster juntos en una sola presentación.</li>
+    </ol>
+    <p>El plazo máximo para presentar los pósteres es el <b>domingo 18 de octubre de 2026</b>.</p>
+    <div class="note"><b>NOTA:</b> Los pósteres pasan por una revisión y evaluación del Comité Científico. Por lo tanto, cuanto antes se envíen, mejor.</div>
+    <p>Los pósteres deben elaborarse con la plantilla oficial del Congreso, disponible para descargar en: <a href="https://docs.google.com/presentation/d/1ZQFisu6cjJ0aPDZNrpcpgnD8gW7NOylT/edit?usp=drive_link&amp;ouid=114707393747987572523&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Plantilla de póster</a></p>
+    <p>El diseño debe garantizar una lectura ágil, visual y ordenada, e incluir los siguientes apartados:</p>
+    <ul class="b">
+      <li><b>Encabezado:</b> título del trabajo, autores/as, institución y eje temático.</li>
+      <li><b>Introducción y objetivos:</b> breve contextualización del problema y propósito del trabajo o experiencia.</li>
+      <li><b>Metodología:</b> diseño, población, ámbito de estudio o estrategia de intervención.</li>
+      <li><b>Desarrollo / resultados:</b> hallazgos principales, datos relevantes o ejes de la experiencia.</li>
+      <li><b>Conclusiones / consideraciones finales:</b> reflexiones, aportes a la práctica profesional y proyecciones.</li>
+      <li><b>Referencias bibliográficas:</b> citas principales (formato APA sugerido).</li>
+    </ul>
+    <p style="margin-top:12px">Los trabajos serán evaluados por el Comité Científico.</p>
   </section>
 
   <section>
-    <h2><i>06</i>Inscripción y consultas</h2>
-    <div class="ind">
-      <p>La inscripción, tanto para asistentes como para expositores/as, se realiza a través del formulario: <a href="https://forms.gle/W51KAWTxV3yG5sHf7" target="_blank" rel="noopener">INSCRIBITE ACÁ!</a></p>
-      <table class="fechas">
-        <tr><td>18 de octubre de 2026</td><td>Plazo máximo para presentar los pósteres</td></tr>
-        <tr><td>18 de noviembre de 2026</td><td>Realización del Congreso</td></tr>
-      </table>
-      <p>Consultas: <a href="mailto:cehu.inscripciones@gmail.com">cehu.inscripciones@gmail.com</a></p>
-      <div class="sign"><big>¡Los/as esperamos!</big>Comité Organizador y Comité Científico<br>2.° Congreso de Enfermería de los Hospitales Universitarios de la UBA</div>
-    </div>
+    <h2>Inscripción y consultas</h2>
+    <p>La inscripción, tanto para asistentes como para expositores/as, se realiza a través del formulario: <a class="big-cta" href="https://forms.gle/W51KAWTxV3yG5sHf7" target="_blank" rel="noopener">INSCRIBITE ACÁ!</a></p>
+    <h2 style="margin-top:20px">Fechas claves</h2>
+    <table class="fechas">
+      <tr><td>18/10/2026</td><td>Plazo máximo para presentar los pósteres</td></tr>
+      <tr><td>18/11/2026</td><td>Realización del Congreso</td></tr>
+    </table>
+    <p>Consultas: <a href="mailto:cehu.inscripciones@gmail.com">cehu.inscripciones@gmail.com</a></p>
+    <div class="sign"><big>¡Los/as esperamos!</big>Comité Organizador y Comité Científico<br>2.° Congreso de Enfermería de los Hospitales Universitarios de la UBA</div>
   </section>
+  </div>
 </article>
 </body>
 </html>
