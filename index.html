@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>2.° Congreso de Enfermería de los Hospitales Universitarios · UBA 2026</title>
 <meta name="description" content="18 de noviembre de 2026 · Facultad de Ciencias Médicas, UBA. Docencia, ciencia y asistencia: el triple compromiso de la Enfermería universitaria.">
-<meta name="theme-color" content="#262954">
+<meta name="theme-color" content="#1E2655">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -22,23 +22,23 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Noto+Serif:wght@600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#262954;--navy-2:#1d1f42;--orange:#ee891d;--orange-600:#c96f0c;--green:#028037;--green-600:#016a2d;--green-700:#015524;
-  --green-100:#e6f3eb;--orange-100:#fdf0e1;--navy-100:#ecedf4;
-  --color-bg:#fff;--color-surface:#f5f5f9;--color-white:#fff;--color-text:#262954;
-  --color-divider:color-mix(in srgb,#262954 22%,transparent);
-  --color-strong:#262954;
+  --navy:#1E2655;--navy-2:#1E2655;--orange:#FA6500;--orange-600:#B84A00;--green:#00812E;--green-600:#006B26;--green-700:#00561F;
+  --green-100:#E5F2EA;--orange-100:#FFF0E6;--navy-100:#ECEDF4;
+  --color-bg:#fff;--color-surface:#f5f5f9;--color-white:#fff;--color-text:#1E2655;
+  --color-divider:color-mix(in srgb,#1E2655 20%,transparent);
+  --color-strong:#1E2655;
   --color-accent:var(--green);
-  --serif:"Lora",Georgia,serif;--font:"Titillium Web",system-ui,sans-serif;
+  --serif:"Noto Serif",Georgia,serif;--display:"Archivo",system-ui,sans-serif;--font:"Archivo",system-ui,sans-serif;
   --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s6:24px;--s8:32px;--s12:48px;--s16:64px;--s24:96px;
   --wrap:1280px;--muted:color-mix(in srgb,var(--color-text) 70%,transparent);
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font);font-size:16.5px;line-height:1.55}
-h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.12;letter-spacing:-.01em;margin:0;color:var(--navy)}
+body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font);font-size:16px;line-height:1.6}
+h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.12;letter-spacing:-.015em;margin:0;color:var(--navy);text-wrap:balance}
 p{margin:0 0 var(--s3);text-wrap:pretty}
 a{color:var(--green);text-underline-offset:3px;font-weight:600}
 a:hover{color:var(--green-600)}
@@ -46,7 +46,7 @@ img{display:block;max-width:100%}
 :focus{outline:none}:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
 ::selection{background:color-mix(in srgb,var(--orange) 30%,transparent)}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--s6)}
-.kicker{font-family:var(--font);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange)}
+.kicker{font-family:var(--font);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-600)}
 .muted{color:var(--muted)}
 
 /* buttons */
@@ -59,8 +59,8 @@ img{display:block;max-width:100%}
 .btn-secondary:hover{background:var(--navy);color:#fff}
 .btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
 .btn-ghost:hover{background:#fff;color:var(--navy)}
-.btn-orange{background:var(--orange);color:var(--navy)}
-.btn-orange:hover{background:#f39a38;color:var(--navy)}
+.btn-orange{background:var(--orange);color:#fff}
+.btn-orange:hover{background:#e05a00;color:#fff}
 .btn-wide{min-width:240px;justify-content:space-between}
 .tag{display:inline-flex;align-items:center;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;background:var(--orange-100);color:var(--orange-600)}
 .tag-outline{background:transparent;border:1px solid var(--orange);color:var(--orange-600)}
@@ -71,12 +71,12 @@ img{display:block;max-width:100%}
 .brand{display:flex;align-items:center;gap:var(--s3);text-decoration:none;color:#fff;margin-right:auto;min-width:0}
 .brand:hover{color:#fff}
 .brand img{width:38px;height:38px}
-.brand b{font-family:var(--serif);font-weight:700;font-size:15.5px;line-height:1.1}
+.brand b{font-family:var(--display);font-weight:700;font-size:15.5px;line-height:1.1}
 .brand span{display:block;font-size:11.5px;color:rgba(255,255,255,.72);font-weight:400;letter-spacing:.02em}
 .nav-links{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0}
 .nav-links > li{position:relative}
 .nav-links a,.nav-links button.drop{display:flex;align-items:center;gap:6px;height:64px;padding:0 10px;color:#fff;text-decoration:none;font:600 14.5px var(--font);background:none;border:0;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-3px}
-.nav-links a:hover,.nav-links button.drop:hover,.nav-links a.active{color:var(--orange);border-bottom-color:var(--orange)}
+.nav-links a:hover,.nav-links button.drop:hover,.nav-links a.active{color:#FF9A57;border-bottom-color:var(--orange)}
 .dropdown{position:absolute;top:100%;right:0;min-width:300px;background:var(--color-white);border-top:3px solid var(--orange);display:none;list-style:none;margin:0;padding:0;box-shadow:0 14px 32px rgba(29,31,66,.28)}
 .dropdown.open{display:block}
 .dropdown a{height:auto;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:2px 12px;border-bottom:1px solid var(--color-divider);margin:0;color:var(--navy)}
@@ -89,17 +89,16 @@ img{display:block;max-width:100%}
 .burger{display:none;width:44px;height:44px;border:1px solid rgba(255,255,255,.4);background:none;cursor:pointer;align-items:center;justify-content:center;color:#fff}
 
 /* hero */
-.hero{background:var(--navy);color:#fff}
-.hero-grid{display:grid;grid-template-columns:minmax(0,376px) minmax(0,1fr);align-items:center;gap:var(--s8)}
-.hero-mosaic{align-self:stretch;display:flex;align-items:flex-start;margin-left:calc(-1 * var(--s6))}
+.hero{background:#fff;color:var(--navy);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,600px);align-items:center;gap:var(--s12);padding:var(--s12) max(var(--s6),calc((100vw - var(--wrap))/2 + var(--s6))) var(--s12) 0}
+.hero-mosaic{max-width:760px;justify-self:start;width:100%}
 .hero-mosaic img{width:100%;height:auto}
-.hero-main{padding:var(--s12) 0 var(--s12)}
-.hero-edition{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:var(--s4)}
-.hero h1{font-family:var(--serif);color:#fff;font-size:clamp(32px,3.9vw,54px);font-weight:400;line-height:1.08;letter-spacing:-.015em;margin-bottom:var(--s6)}
-.hero h1 b{font-weight:700;display:block}
-.hero-rule{height:3px;background:var(--green);max-width:780px;margin-bottom:var(--s4)}
-.hero .sub{font-size:clamp(16px,1.6vw,20px);font-weight:600;line-height:1.35;color:var(--orange);margin-bottom:var(--s8)}
-.hero .sub b{font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.hero-main{padding:0}
+.hero-edition{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-600);margin-bottom:var(--s4)}
+.hero h1{font-family:var(--display);color:var(--navy);font-size:clamp(30px,3.3vw,50px);font-weight:700;line-height:1.1;letter-spacing:-.02em;margin-bottom:var(--s6);text-wrap:balance}
+.hero-rule{height:4px;background:var(--green);margin-bottom:var(--s6)}
+.hero .sub{font-family:var(--serif);font-size:clamp(17px,1.5vw,21px);font-weight:600;line-height:1.4;color:var(--green);margin-bottom:var(--s8)}
+.hero .sub b{display:block;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:1.08em;margin-bottom:4px}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:var(--s3)}
 .hero-info{background:var(--navy-2);color:#fff}
 .hero-info .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -109,7 +108,8 @@ img{display:block;max-width:100%}
 .cell .big{font-size:28px;font-weight:700;line-height:1.05}
 .cell .mid{font-size:20px;font-weight:700;line-height:1.15}
 .cell p{margin:6px 0 0;font-size:14.5px;color:rgba(255,255,255,.75)}
-.cell a{color:var(--orange)}
+.cell a{color:#FF9A57}
+.hero-info .kicker{color:#FF9A57}
 .countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:var(--s1)}
 .countdown div{border-left:1px solid rgba(255,255,255,.18);padding-left:10px}
 .countdown div:first-child{border-left:0;padding-left:0}
@@ -120,27 +120,27 @@ img{display:block;max-width:100%}
 section.block{border-bottom:1px solid var(--color-divider);padding:var(--s16) 0}
 section.alt{background:var(--color-surface)}
 .sec-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--s6);margin-bottom:var(--s12);align-items:end}
-.sec-head .idx{grid-column:1/3;font-size:13px;font-weight:700;color:var(--orange);letter-spacing:.14em;text-transform:uppercase}
+.sec-head .idx{grid-column:1/3;font-size:13px;font-weight:700;color:var(--orange-600);letter-spacing:.14em;text-transform:uppercase}
 .sec-head h2{grid-column:3/10;font-size:clamp(30px,3.8vw,50px)}
 .sec-head .aside{grid-column:10/13;display:flex;justify-content:flex-start}
 .body-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--s6)}
 .body-grid > .main{grid-column:3/13}
 
 /* fundamentacion */
-.lead{font-family:var(--serif);font-size:clamp(21px,2.2vw,28px);font-weight:500;line-height:1.35;grid-column:3/11;margin-bottom:var(--s8);text-wrap:pretty;color:var(--navy)}
+.lead{font-family:var(--serif);font-size:clamp(20px,2vw,26px);font-weight:600;line-height:1.4;grid-column:3/11;margin-bottom:var(--s8);text-wrap:pretty;color:var(--navy)}
 .cols2{grid-column:3/13;columns:2;column-gap:var(--s12);column-rule:1px solid var(--color-divider)}
 .cols2 p{break-inside:avoid}
 
 /* ejes */
 .ejes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s6)}
 .eje{display:flex;flex-direction:column;gap:var(--s3)}
-.badge{width:92px;height:92px;display:flex;flex-direction:column;justify-content:center;align-items:center;font-family:var(--font);font-weight:700;line-height:.95;margin-bottom:var(--s2)}
+.badge{width:92px;height:92px;display:flex;flex-direction:column;justify-content:center;align-items:center;font-family:var(--display);font-weight:800;line-height:.95;margin-bottom:var(--s2)}
 .badge small{font-size:20px;letter-spacing:.04em}
 .badge span{font-size:40px;letter-spacing:-.01em}
-.b-navy{background:var(--navy);color:var(--orange)}
-.b-orange{background:var(--orange);color:var(--green)}
-.b-green{background:var(--green);color:var(--navy)}
-.b-navy2{background:var(--navy);color:var(--green)}
+.b-navy{background:var(--navy);color:#fff}
+.b-orange{background:var(--orange);color:#fff}
+.b-green{background:var(--green);color:#fff}
+.b-navy2{background:var(--navy);color:#fff}
 .eje h3{font-size:20px;line-height:1.2}
 .eje p{font-size:15px;color:var(--muted);margin:0}
 
@@ -181,7 +181,7 @@ section.alt{background:var(--color-surface)}
 .steps li::before{content:counter(s);font-weight:700;color:var(--orange);font-size:22px;line-height:1.05}
 .callout{background:var(--green-100);border-left:4px solid var(--green);padding:var(--s4);font-size:14.5px;color:var(--green-700);margin:var(--s4) 0}
 .callout b{font-weight:700}
-.callout.orange{background:var(--orange-100);border-left-color:var(--orange);color:#7a4206}
+.callout.orange{background:var(--orange-100);border-left-color:var(--orange);color:#7A3300}
 .stack{display:flex;flex-direction:column;gap:var(--s2);margin-top:var(--s4)}
 
 /* fechas */
@@ -215,7 +215,7 @@ section.alt{background:var(--color-surface)}
 /* ubicacion */
 .map-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));border-top:3px solid var(--navy)}
 .map-info{grid-column:1/5;padding:var(--s6) var(--s8) var(--s6) 0;display:flex;flex-direction:column;gap:var(--s4)}
-.map-info .addr{font-family:var(--serif);font-size:28px;font-weight:700;line-height:1.15}
+.map-info .addr{font-family:var(--display);font-size:28px;font-weight:700;line-height:1.15}
 .map-frame{grid-column:5/13;min-height:440px;position:relative;background:var(--color-surface)}
 .map-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .transport li{display:grid;grid-template-columns:90px 1fr;gap:var(--s3);font-size:14.5px}
@@ -235,12 +235,13 @@ section.alt{background:var(--color-surface)}
 
 /* poster close */
 .poster{background:var(--navy);color:#fff;padding:var(--s16) 0;position:relative;overflow:hidden}
-.poster::before{content:"";position:absolute;left:0;top:0;width:28px;height:100%;background:linear-gradient(var(--orange) 0 50%,var(--green) 50% 100%)}
+.poster-blocks{position:absolute;left:0;bottom:0;height:100%;width:auto;max-width:none}
+.poster > .wrap{padding-left:max(var(--s6),220px)}
 .poster-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--s6);align-items:end;position:relative}
 .poster h2{grid-column:1/9;color:#fff;font-size:clamp(38px,5.4vw,76px);line-height:1.02}
-.poster h2 em{font-style:normal;color:var(--orange)}
+.poster h2 em{font-style:normal;color:#FF7A1F}
 .poster .act{grid-column:9/13;display:flex;flex-direction:column;gap:var(--s3)}
-.poster .act p{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin:var(--s3) 0 0}
+.poster .act p{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#FF9A57;margin:var(--s3) 0 0}
 .poster a.mail{color:#fff;font-weight:700;font-size:18px;word-break:break-all}
 
 footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
@@ -253,7 +254,7 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
 @media (max-width:1100px){
   .nav-links a,.nav-links button.drop{padding:0 7px;font-size:13.5px}
   .brand span{display:none}
-  .hero-grid{grid-template-columns:minmax(0,280px) minmax(0,1fr)}
+  .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,480px);gap:var(--s8)}
 }
 @media (max-width:960px){
   .burger{display:inline-flex}
@@ -262,9 +263,9 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
   .nav-links.open{display:flex}
   .nav-links a,.nav-links button.drop{height:48px;border-bottom:1px solid rgba(255,255,255,.15);margin:0;width:100%;padding:0}
   .dropdown{position:static;box-shadow:none;border:0;border-left:3px solid var(--orange);min-width:0}
-  .hero-grid{grid-template-columns:1fr;gap:0}
-  .hero-mosaic{max-width:230px;margin-left:calc(-1 * var(--s6))}
-  .hero-main{padding:var(--s6) 0 var(--s12)}
+  .hero-grid{grid-template-columns:1fr;gap:var(--s8);padding:var(--s6) 0 var(--s12)}
+  .hero-mosaic{max-width:560px}
+  .hero-main{padding:0 var(--s6)}
   .hero-info .row{grid-template-columns:1fr}
   .cell + .cell{border-left:0;padding-left:0;border-top:1px solid rgba(255,255,255,.18)}
   .sec-head .idx,.sec-head h2,.sec-head .aside,.body-grid > .main,.lead,.cols2{grid-column:1/-1}
@@ -279,7 +280,8 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
   .map-frame{grid-column:1/-1;min-height:340px}
   .circ{grid-template-columns:1fr}
   .circ > *{border-right:0!important;border-bottom:1px solid var(--color-divider);padding-left:0!important;min-height:0}
-  .poster::before{width:var(--s3)}
+  .poster-blocks{display:none}
+  .poster > .wrap{padding-left:var(--s6)}
   .poster h2,.poster .act{grid-column:1/-1}
   .prog .type{display:none}
   .dates-wrap{grid-template-columns:1fr}
@@ -287,7 +289,8 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
 }
 @media (max-width:640px){
   .wrap{padding:0 var(--s4)}
-  .hero-mosaic{margin-left:calc(-1 * var(--s4));max-width:190px}
+  .hero-main{padding:0 var(--s4)}
+  .poster > .wrap{padding-left:var(--s4)}
   .ejes{grid-template-columns:1fr}
   .badge{width:76px;height:76px}.badge span{font-size:32px}.badge small{font-size:17px}
   .date{grid-column:1/-1;padding-right:0}
@@ -306,7 +309,7 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
 <header class="topbar">
   <div class="wrap nav">
     <a class="brand" href="#inicio" aria-label="Inicio">
-      <img src="assets/icono-512.png" alt="">
+      <img src="assets/icono-2026-512.png" alt="">
       <div><b>2.° Congreso de Enfermería</b><span>Hospitales Universitarios · UBA</span></div>
     </a>
     <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
@@ -338,17 +341,17 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
 
 <main>
 <section class="hero" id="inicio">
-  <div class="wrap hero-grid">
-    <div class="hero-mosaic"><img src="assets/mosaico-congreso.png" alt="" width="752" height="776"></div>
+  <div class="hero-grid">
+    <div class="hero-mosaic"><img src="assets/mosaico-2026.svg" alt="" width="954" height="941"></div>
     <div class="hero-main">
       <div class="hero-edition">2.° edición · 2026</div>
-      <h1><b>Congreso de Enfermería</b> de los Hospitales Universitarios de la Universidad de Buenos Aires</h1>
+      <h1>Congreso de Enfermería de los Hospitales Universitarios de la Universidad de Buenos Aires</h1>
       <div class="hero-rule"></div>
-      <p class="sub"><b>Docencia, ciencia y asistencia:</b> el triple compromiso de la Enfermería universitaria</p>
+      <p class="sub"><b>Docencia, ciencia y asistencia:</b>El triple compromiso de la Enfermería universitaria</p>
       <div class="hero-ctas">
         <a class="btn btn-primary btn-wide" href="https://forms.gle/W51KAWTxV3yG5sHf7" target="_blank" rel="noopener">Inscribite acá
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-ghost btn-wide" href="primera-circular.html" target="_blank" rel="noopener">Leer la primera circular
+        <a class="btn btn-secondary btn-wide" href="primera-circular.html" target="_blank" rel="noopener">Leer la primera circular
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></a>
       </div>
     </div>
@@ -380,7 +383,7 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
 
 <section class="block" id="fechas" style="padding:var(--s12) 0">
   <div class="wrap dates-wrap">
-    <img src="assets/ico-calendario.png" alt="">
+    <img src="assets/ico2026-calendario.png" alt="">
     <div class="dates">
       <div class="date" data-date="2026-10-18T23:59:59-03:00">
         <span class="d">18</span>
@@ -447,8 +450,8 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
       </div>
       <div class="part-col" style="grid-column:span 4">
         <h3>Modalidades</h3>
-        <div class="mod"><img src="assets/ico-asistente.png" alt=""><div><b>Asistente.</b><p>Participa de las ponencias centrales, los talleres prácticos y la sesión de pósteres.</p></div></div>
-        <div class="mod navy"><img src="assets/ico-expositor.png" alt=""><div><b>Expositor/a de pósteres.</b><p>Presenta un trabajo en formato póster en la categoría <strong>Estudiante o Profesional</strong>, enmarcado en uno de los cuatro ejes temáticos.</p></div></div>
+        <div class="mod"><img src="assets/ico2026-asistente.png" alt=""><div><b>Asistente.</b><p>Participa de las ponencias centrales, los talleres prácticos y la sesión de pósteres.</p></div></div>
+        <div class="mod navy"><img src="assets/ico2026-expositor.png" alt=""><div><b>Expositor/a de pósteres.</b><p>Presenta un trabajo en formato póster en la categoría <strong>Estudiante o Profesional</strong>, enmarcado en uno de los cuatro ejes temáticos.</p></div></div>
         <div class="callout">Ambas modalidades requieren <b>inscripción previa</b>.</div>
         <a class="btn btn-primary btn-wide" href="https://forms.gle/W51KAWTxV3yG5sHf7" target="_blank" rel="noopener" style="width:100%">Formulario de inscripción
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -560,6 +563,7 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
 </section>
 
 <section class="poster" id="contacto">
+  <img class="poster-blocks" src="assets/bloques-cierre-2026.png" alt="">
   <div class="wrap poster-grid">
     <h2>¡Los/as esperamos el <em>18 de noviembre</em>!</h2>
     <div class="act">

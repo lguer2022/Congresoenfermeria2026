@@ -6,7 +6,7 @@
 <title>Primera circular · 2.° Congreso de Enfermería · UBA 2026</title>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#262954">
+<meta name="theme-color" content="#1E2655">
 <meta name="description" content="Convocatoria, ejes temáticos, modalidades y presentación de pósteres. Plazo para pósteres: 18 de octubre de 2026.">
 <link rel="canonical" href="https://2cehu.netlify.app/primera-circular.html">
 <meta property="og:type" content="article">
@@ -20,9 +20,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Noto+Serif:wght@600;700&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#262954;--orange:#ee891d;--orange-600:#c96f0c;--green:#028037;--green-600:#016a2d;--green-100:#e6f3eb;--bg:#eef0f5;--paper:#fff;--text:#262954;--div:color-mix(in srgb,#262954 20%,transparent);--muted:color-mix(in srgb,#262954 70%,transparent);--serif:"Lora",Georgia,serif;--font:"Titillium Web",system-ui,sans-serif}
+:root{--navy:#1E2655;--orange:#FA6500;--orange-600:#B84A00;--green:#00812E;--green-600:#006B26;--green-100:#E5F2EA;--bg:#EEF0F5;--paper:#fff;--text:#1E2655;--div:color-mix(in srgb,#1E2655 20%,transparent);--muted:color-mix(in srgb,#1E2655 70%,transparent);--serif:"Noto Serif",Georgia,serif;--font:"Archivo",system-ui,sans-serif}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font:16.5px/1.6 var(--font)}
 a{color:var(--green);text-underline-offset:3px;font-weight:700}a:hover{color:var(--green-600)}
@@ -31,27 +31,31 @@ h1,h2,h3{line-height:1.15;margin:0}
 p{margin:0 0 12px;text-wrap:pretty}
 .bar{position:sticky;top:0;background:var(--navy);border-bottom:3px solid var(--green);z-index:5}
 .bar .in{max-width:900px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:10px}
-.bar .t{margin-right:auto;font-family:var(--serif);font-weight:700;font-size:15px;color:#fff}
+.bar .t{margin-right:auto;font-family:var(--font);font-weight:700;font-size:15px;color:#fff}
 .btn{display:inline-flex;align-items:center;gap:8px;font:700 14px var(--font);padding:8px 14px;border:2px solid rgba(255,255,255,.5);background:none;color:#fff;text-decoration:none;cursor:pointer}
 .btn:hover{background:#fff;color:var(--navy)}
 .btn-p{background:var(--green);border-color:var(--green)}.btn-p:hover{background:var(--green-600);border-color:var(--green-600);color:#fff}
 .doc{max-width:900px;margin:32px auto 64px;background:var(--paper);box-shadow:0 8px 30px rgba(38,41,84,.08)}
-.banner{display:block;width:100%;height:auto}
+.banner{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:32px;align-items:center;padding:28px 56px 28px 0;border-bottom:4px solid var(--green)}
+.banner img{width:100%;height:auto}
+.banner h1{font-family:var(--font);font-weight:700;font-size:30px;line-height:1.12;letter-spacing:-.015em;color:var(--navy);text-wrap:balance}
+.banner p{font-family:var(--serif);color:var(--green);font-weight:600;font-size:16px;line-height:1.4;margin:14px 0 0}
+.banner p b{display:block;letter-spacing:.12em;text-transform:uppercase}
 .inner{padding:40px 64px 56px}
 .head{border-bottom:2px solid var(--navy);padding-bottom:24px;margin-bottom:8px}
-.k{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:10px}
+.k{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-600);display:block;margin-bottom:10px}
 .meta{font-weight:700;font-size:18px;line-height:1.45;margin-bottom:16px}
 .org{font-size:15px}
-.org b{color:var(--orange);letter-spacing:.1em;text-transform:uppercase}
+.org b{color:var(--orange-600);letter-spacing:.1em;text-transform:uppercase}
 .place{font-size:15px;color:var(--muted);margin-top:8px}
 section{padding:26px 0;border-bottom:1px solid var(--div)}
 section:last-of-type{border-bottom:0}
-section h2{font-family:var(--font);font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:14px}
+section h2{font-family:var(--font);font-size:17px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-600);margin-bottom:14px}
 .ejes{list-style:none;padding:0;margin:0}
 .ejes li{display:grid;grid-template-columns:76px 1fr;gap:18px;padding:10px 0;align-items:start}
 .ejes .badge{width:76px;height:76px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;line-height:.95}
 .ejes .badge small{font-size:16px}.ejes .badge span{font-size:32px}
-.b1{background:var(--navy);color:var(--orange)}.b2{background:var(--orange);color:var(--green)}.b3{background:var(--green);color:var(--navy)}.b4{background:var(--navy);color:var(--green)}
+.b1{background:var(--navy);color:#fff}.b2{background:var(--orange);color:#fff}.b3{background:var(--green);color:#fff}.b4{background:var(--navy);color:#fff}
 .ejes li b{font-weight:700}
 ul.b{margin:0;padding:0 0 0 24px;list-style:none}
 ul.b li{padding:6px 0}
@@ -67,9 +71,9 @@ ul.b li{padding:6px 0}
 .fechas tr:first-child td{border-top:0}
 .fechas td:first-child{font-weight:700;width:160px;color:var(--green);font-size:18px}
 .sign{margin-top:28px;font-weight:700}
-.sign big{display:block;font-family:var(--serif);font-size:26px;margin-bottom:6px}
+.sign big{display:block;font-family:var(--font);font-size:26px;margin-bottom:6px}
 .big-cta{font-size:22px;letter-spacing:.02em}
-@media(max-width:700px){.doc{margin:0}.inner{padding:24px 18px 40px}.ejes li{grid-template-columns:60px 1fr;gap:12px}.ejes .badge{width:60px;height:60px}.ejes .badge span{font-size:25px}.ejes .badge small{font-size:13px}.fechas td{display:block}.fechas td:first-child{width:auto;padding-bottom:0}.fechas td+td{border-top:0;padding-top:2px}.bar .t{display:none}.mod{grid-template-columns:64px 1fr}.mod img{width:64px;height:64px}}
+@media(max-width:700px){.banner{grid-template-columns:1fr;padding:0 0 22px;gap:18px}.banner img{max-width:240px}.banner h1,.banner p{padding:0 18px}.banner h1{font-size:24px}.doc{margin:0}.inner{padding:24px 18px 40px}.ejes li{grid-template-columns:60px 1fr;gap:12px}.ejes .badge{width:60px;height:60px}.ejes .badge span{font-size:25px}.ejes .badge small{font-size:13px}.fechas td{display:block}.fechas td:first-child{width:auto;padding-bottom:0}.fechas td+td{border-top:0;padding-top:2px}.bar .t{display:none}.mod{grid-template-columns:64px 1fr}.mod img{width:64px;height:64px}}
 @media print{.bar{display:none}body{background:#fff}.doc{margin:0;max-width:none;box-shadow:none}.inner{padding:24px 0 0}section{break-inside:avoid}}
 </style>
 </head>
@@ -81,7 +85,10 @@ ul.b li{padding:6px 0}
 </div></div>
 
 <article class="doc">
-  <img class="banner" src="assets/encabezado-congreso.png" width="2480" height="776" alt="2.° Congreso de Enfermería de los Hospitales Universitarios de la Universidad de Buenos Aires. Docencia, ciencia y asistencia: el triple compromiso de la enfermería universitaria">
+  <header class="banner">
+    <img src="assets/mosaico-2026.svg" width="954" height="941" alt="">
+    <div><h1>2.° Congreso de Enfermería de los Hospitales Universitarios de la Universidad de Buenos Aires</h1><p><b>Docencia, ciencia y asistencia:</b>El triple compromiso de la Enfermería universitaria</p></div>
+  </header>
   <div class="inner">
   <header class="head">
     <span class="k">Primera circular</span>
@@ -118,8 +125,8 @@ ul.b li{padding:6px 0}
 
   <section>
     <h2>Modalidades de participación</h2>
-    <div class="mod"><img src="assets/ico-asistente.png" alt=""><div><b>Asistente.</b>Participa de las ponencias centrales, los talleres prácticos y la sesión de pósteres.</div></div>
-    <div class="mod navy"><img src="assets/ico-expositor.png" alt=""><div><b>Expositor/a de pósteres.</b>Presenta un trabajo en formato póster en alguna de las dos categorías: <strong>Estudiante o Profesional.</strong> El trabajo debe enmarcarse en uno de los cuatro ejes temáticos.</div></div>
+    <div class="mod"><img src="assets/ico2026-asistente.png" alt=""><div><b>Asistente.</b>Participa de las ponencias centrales, los talleres prácticos y la sesión de pósteres.</div></div>
+    <div class="mod navy"><img src="assets/ico2026-expositor.png" alt=""><div><b>Expositor/a de pósteres.</b>Presenta un trabajo en formato póster en alguna de las dos categorías: <strong>Estudiante o Profesional.</strong> El trabajo debe enmarcarse en uno de los cuatro ejes temáticos.</div></div>
     <p>Ambas modalidades requieren inscripción previa.</p>
   </section>
 
