@@ -164,6 +164,7 @@ section.alt{background:var(--color-surface)}
 .prog .sub{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px;font-size:14px}
 .prog .sub li{display:grid;gap:1px;padding-left:12px;border-left:3px solid var(--orange)}
 .prog .sub .who{color:var(--muted)}
+.prog .sub .who b{font-weight:600;color:var(--color-text)}
 .prog tr.pause td{background:var(--color-surface)}
 .prog tr.pause .ev{font-weight:600}
 .note{display:flex;gap:var(--s3);align-items:flex-start;margin-top:var(--s6);font-size:14.5px;color:var(--muted)}
@@ -602,7 +603,7 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
     {t:'11:20 – 12:00',d:40,f:'Mesa redonda',ev:'Instituto de Investigaciones Médicas “Dr. Alfredo Lanari”',x:{titulo:'Nuevos desafíos y transformaciones en el accionar de enfermería postpandemia: una mirada hacia la adaptación a las necesidades de la comunidad',moderador:'Lic. Prof. Tulio Cardich',disertantes:'Lic. Gustavo Balacco, Lic. Mabel Torres, Lic. Lorena Kwast, Lic. Prof. Sabrina Curletti'}},
     {t:'12:00 – 12:40',d:40,f:'Disertaciones',ev:'Instituto de Tisioneumonología “Prof. Dr. Raúl Vacarezza”',list:[['TBC en primera persona. Experiencias, necesidades y construcción del autocuidado desde la perspectiva del paciente','Lic. Carolina Azzan'],['Fortalecimiento del cuidado de enfermería en un espacio multidisciplinario de atención de personas con fibrosis quística','Lic. Lourdes Satragno y Lic. Gabriel Galván']]},
     {t:'12:40 – 13:40',d:60,f:'',ev:'Receso / Almuerzo',p:1},
-    {t:'13:40 – 14:40',d:60,f:'Talleres',ev:'Simultáneos, a cargo de cada institución',list:[['Inteligencia artificial para la formación continua en Enfermería: de la investigación a la práctica','Hospital de Clínicas'],['Humanizar el cuidado de las personas con ostomías: una mirada desde la práctica de enfermería oncológica','Instituto Roffo'],['Mitos y verdades de la vía subcutánea','Instituto Lanari'],['Accesos venosos periféricos: del conocimiento a la práctica segura','Instituto Superior FACULTAR'],['Entrenamiento práctico en técnicas y procedimientos del paciente pediátrico crítico','Carrera de Lic. en Enfermería, Facultad de Medicina (UBA)']]},
+    {t:'13:40 – 14:40',d:60,f:'Talleres',ev:'Simultáneos, a cargo de cada institución',list:[['Inteligencia artificial para la formación continua en Enfermería: de la investigación a la práctica','Hospital de Clínicas','Prof. Lic. Raúl César Díaz y Marcelo Lancry Kamycki'],['Humanizar el cuidado de las personas con ostomías: una mirada desde la práctica de enfermería oncológica','Instituto Roffo','Lic. Verónica M. Tactaca, Lic. Lucía B. Fernández, Prof. Lic. Delia M. Reynaga, Lic. Anahid E. Cardozo, Enf. Patricia E. Cala y Enf. Leonardo Mamani'],['Mitos y verdades de la vía subcutánea','Instituto Lanari','Lic. Lorena Kwast, Lic. Alfredo Rigal y Lic. María Cristina Vallejos'],['Accesos venosos periféricos: del conocimiento a la práctica segura','Instituto Superior FACULTAR','Lic. Flora Choque y estudiantes de 2.° año, con la coordinación de Lic. Ornella Generoso y Lic. Iván Kowaluk'],['Entrenamiento práctico en técnicas y procedimientos del paciente pediátrico crítico','Carrera de Lic. en Enfermería, Facultad de Medicina (UBA)','Lic. Gastón Alegre y Lic. Gabriela Abtt']]},
     {t:'14:40 – 15:20',d:40,f:'Disertación',ev:'Instituto Superior FACULTAR',x:{titulo:'Comunicación en Salud',disertantes:'Lic. Sabrina Pappaterra'}},
     {t:'15:20 – 16:00',d:40,f:'Disertación',ev:'Carrera de Licenciatura en Enfermería, Facultad de Medicina (UBA)',x:{titulo:'El paciente pediátrico crónico complejo: una mirada desde enfermería',moderador:'Lic. María Santini',disertantes:'Lic. Gabriela Abtt'}},
     {t:'16:00 – 16:30',d:30,f:'',ev:'Café / Break',p:1},
@@ -614,7 +615,7 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
   prog.forEach(function(r){
     var det='';
     if(r.x){det='<dl class="det">';['titulo','moderador','disertantes'].forEach(function(k){if(r.x[k])det+='<dt>'+L[k]+'</dt><dd'+(k=='titulo'?' class="tit"':'')+'>'+r.x[k]+'</dd>';});det+='</dl>';}
-    if(r.list){det+='<ul class="sub">';r.list.forEach(function(it){det+='<li><span class="tit">'+it[0]+'</span><span class="who">'+it[1]+'</span></li>';});det+='</ul>';}
+    if(r.list){det+='<ul class="sub">';r.list.forEach(function(it){det+='<li><span class="tit">'+it[0]+'</span><span class="who">'+(it[2]?'<b>'+it[1]+'</b> · '+it[2]:it[1])+'</span></li>';});det+='</ul>';}
     h+='<tr'+(r.p?' class="pause"':'')+'><td class="t">'+r.t+' hs'+(r.d?'<small>'+r.d+' min</small>':'')+'</td><td class="type">'+(r.f?'<span class="tag">'+r.f+'</span>':'')+'</td><td><div class="ev">'+(r.f?'<span class="muted" style="font-weight:600">'+r.f+': </span>':'')+r.ev+'</div>'+det+'</td></tr>';
   });
   tb.innerHTML=h;
