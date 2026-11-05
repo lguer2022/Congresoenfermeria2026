@@ -160,7 +160,10 @@ section.alt{background:var(--color-surface)}
 .prog .det{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin-top:8px;font-size:14px}
 .prog .det dt{color:var(--muted)}
 .prog .det dd{margin:0}
-.tbc{color:var(--muted);font-style:italic}
+.prog .det dd.tit,.prog .sub .tit{font-weight:600;color:var(--navy)}
+.prog .sub{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px;font-size:14px}
+.prog .sub li{display:grid;gap:1px;padding-left:12px;border-left:3px solid var(--orange)}
+.prog .sub .who{color:var(--muted)}
 .prog tr.pause td{background:var(--color-surface)}
 .prog tr.pause .ev{font-weight:600}
 .note{display:flex;gap:var(--s3);align-items:flex-start;margin-top:var(--s6);font-size:14.5px;color:var(--muted)}
@@ -344,7 +347,7 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
 </header>
 
 <main>
-<div class="aviso" role="status"><div class="wrap"><b>Prórroga</b><span>El plazo para presentar pósteres se extendió hasta el <strong>domingo 25 de octubre de 2026</strong>.</span><a href="#participar">Ver cómo participar</a></div></div>
+<div class="aviso" role="status"><div class="wrap"><b>Pósteres</b><span>La convocatoria a pósteres finalizó. Los trabajos recibidos están en evaluación por el Comité Científico.</span><a href="#cronograma">Ver cronograma</a></div></div>
 <section class="hero" id="inicio">
   <div class="hero-grid">
     <div class="hero-mosaic"><img src="assets/mosaico-2026.svg" alt="" width="954" height="941"></div>
@@ -392,7 +395,7 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
     <div class="dates">
       <div class="date" data-date="2026-10-25T23:59:59-03:00">
         <span class="d">25</span>
-        <div><div class="m">Octubre 2026 · Prórroga</div><div class="w">Nuevo plazo para presentar los pósteres</div><div class="left" data-left></div></div>
+        <div><div class="m">Octubre 2026</div><div class="w">Cierre de la convocatoria a pósteres</div><div class="left" data-left></div></div>
       </div>
       <div class="date" data-date="2026-11-18T08:00:00-03:00">
         <span class="d">18</span>
@@ -420,7 +423,7 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
 
 <section class="block alt" id="ejes">
   <div class="wrap">
-    <div class="sec-head"><span class="idx">02 — Temario</span><h2>Ejes temáticos</h2><div class="aside"><span class="tag" id="temarioTag">Temario preliminar</span></div></div>
+    <div class="sec-head"><span class="idx">02 — Temario</span><h2>Ejes temáticos</h2><div class="aside"></div></div>
     <div class="ejes">
       <article class="eje"><div class="badge b-navy" aria-label="Eje 1"><small>EJE</small><span>01</span></div><h3>Transformaciones del cuidado y humanización</h3><p>Atención integral, segura y centrada en las personas: modelos de cuidado, humanización, bioética, derechos del paciente y preservación del vínculo humano ante los cambios tecnológicos.</p></article>
       <article class="eje"><div class="badge b-orange" aria-label="Eje 2"><small>EJE</small><span>02</span></div><h3>Enfermería universitaria, formación e investigación</h3><p>La Enfermería como disciplina científica: formación de grado y posgrado, educación continua, investigación, práctica basada en evidencia, simulación clínica y rol estratégico de los hospitales universitarios.</p></article>
@@ -432,12 +435,12 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
 
 <section class="block" id="cronograma">
   <div class="wrap">
-    <div class="sec-head"><span class="idx">03 — Cronograma</span><h2>Miércoles 18 de noviembre</h2><div class="aside"><span class="tag tag-outline">Preliminar</span></div></div>
+    <div class="sec-head"><span class="idx">03 — Cronograma</span><h2>Miércoles 18 de noviembre</h2><div class="aside"></div></div>
     <table class="prog" id="prog">
       <thead><tr><th>Horario</th><th class="type">Formato</th><th>Actividad</th></tr></thead>
       <tbody></tbody>
     </table>
-    <p class="note"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex:none;margin-top:2px"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>Los títulos, moderadores/as y disertantes se confirmarán en la próxima circular.</p>
+    <p class="note"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex:none;margin-top:2px"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>El cronograma puede tener ajustes menores.</p>
   </div>
 </section>
 
@@ -456,19 +459,14 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
       <div class="part-col" style="grid-column:span 4">
         <h3>Modalidades</h3>
         <div class="mod"><img src="assets/ico2026-asistente.png" alt=""><div><b>Asistente.</b><p>Participa de las ponencias centrales, los talleres prácticos y la sesión de pósteres.</p></div></div>
-        <div class="mod navy"><img src="assets/ico2026-expositor.png" alt=""><div><b>Expositor/a de pósteres.</b><p>Presenta un trabajo en formato póster en la categoría <strong>Estudiante o Profesional</strong>, enmarcado en uno de los cuatro ejes temáticos.</p></div></div>
+        <div class="mod navy"><img src="assets/ico2026-expositor.png" alt=""><div><b>Expositor/a de pósteres.</b><p>Presenta un trabajo en formato póster en la categoría <strong>Estudiante o Profesional</strong>, enmarcado en uno de los cuatro ejes temáticos. La convocatoria finalizó el 25 de octubre.</p></div></div>
         <div class="callout">Ambas modalidades requieren <b>inscripción previa</b>.</div>
         <a class="btn btn-primary btn-wide" href="https://forms.gle/W51KAWTxV3yG5sHf7" target="_blank" rel="noopener" style="width:100%">Formulario de inscripción
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="part-col" style="grid-column:span 4">
         <h3>Pósteres</h3>
-        <p style="font-size:14.5px">Quienes participen como expositores/as pueden elegir:</p>
-        <ol class="steps">
-          <li>Inscribirse ahora enviando el resumen y presentar el póster más adelante, dentro del plazo.</li>
-          <li>Enviar el resumen y el póster juntos en una sola presentación.</li>
-        </ol>
-        <div class="callout orange"><b>Plazo prorrogado: domingo 25 de octubre de 2026.</b> Los pósteres pasan por revisión y evaluación del Comité Científico: cuanto antes se envíen, mejor.</div>
+        <div class="callout orange"><b>Convocatoria finalizada.</b> La presentación de pósteres cerró el domingo 25 de octubre de 2026. Los trabajos recibidos están en evaluación por el Comité Científico.</div>
         <h4>Apartados del póster</h4>
         <ul class="list">
           <li><b>Encabezado:</b> título, autores/as, institución y eje temático.</li>
@@ -522,7 +520,7 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
           <li><b>Prof. Lic. Ricardo Molina</b><span>Director de Enfermería · Hospital de Clínicas “José de San Martín”</span></li>
           <li><b>Lic. Mercedes Serrano</b><span>Directora de Enfermería · Instituto de Oncología “Ángel H. Roffo”</span></li>
           <li><b>Lic. Enrique Dree</b><span>Director de Enfermería · Instituto de Tisioneumonología “Prof. Dr. Raúl Vacarezza”</span></li>
-          <li><b>Lic. Alberto Tulio</b><span>Director de Enfermería · Instituto de Investigaciones Médicas “Dr. Alfredo Lanari”</span></li>
+          <li><b>Lic. Prof. Tulio Cardich</b><span>Director de Enfermería · Instituto de Investigaciones Médicas “Dr. Alfredo Lanari”</span></li>
           <li><b>Lic. María Santini</b><span>Directora de la carrera Licenciatura en Enfermería · Facultad de Ciencias Médicas, UBA</span></li>
           <li><b>Lic. Leandro Guerschberg</b><span>Rector · Instituto Superior FACULTAR</span></li>
         </ul>
@@ -594,29 +592,29 @@ footer{padding:var(--s8) 0;font-size:13.5px;color:var(--muted);background:#fff}
 
 <script>
 (function(){
-  // Cronograma — completar campos cuando estén confirmados (reemplazar null por el texto)
-  var TBC='A confirmar';
+  // Cronograma
   var prog=[
     {t:'08:00 – 09:00',d:60,f:'',ev:'Acreditación (código QR)',p:1},
     {t:'09:00 – 09:30',d:30,f:'',ev:'Apertura del Congreso'},
-    {t:'09:30 – 10:10',d:40,f:'Mesa redonda',ev:'Hospital de Clínicas “José de San Martín”',x:{titulo:null,moderador:null,disertantes:null}},
-    {t:'10:10 – 10:50',d:40,f:'Mesa redonda',ev:'Instituto de Oncología “Ángel H. Roffo”',x:{titulo:null,moderador:null,disertantes:null}},
+    {t:'09:30 – 10:10',d:40,f:'Mesa redonda',ev:'Hospital de Clínicas “José de San Martín”',x:{titulo:'Construyendo el futuro de la enfermería: práctica avanzada, autonomía profesional y transformación del cuidado',disertantes:'Lic. Sandra Etchenique, Prof. Lic. Yamila Jiance'}},
+    {t:'10:10 – 10:50',d:40,f:'Mesa redonda',ev:'Instituto de Oncología “Ángel H. Roffo”',x:{titulo:'Inmunoterapia y nuevas vías de administración en oncología: desafíos actuales de la práctica de enfermería',moderador:'Prof. Lic. Verónica Vilte',disertantes:'Lic. Carina Mendoza, Lic. Agustina Guevara, Lic. Fernando Cabana, Prof. Lic. Amparo Flores, Lic. Esp. Paula Salinas'}},
     {t:'10:50 – 11:20',d:30,f:'',ev:'Café / Break',p:1},
-    {t:'11:20 – 12:00',d:40,f:'Mesa redonda',ev:'Instituto de Investigaciones Médicas “Dr. Alfredo Lanari”',x:{titulo:null,moderador:null,disertantes:null}},
-    {t:'12:00 – 12:40',d:40,f:'Mesa redonda',ev:'Instituto de Tisioneumonología “Prof. Dr. Raúl Vacarezza”',x:{titulo:null,moderador:null,disertantes:null}},
+    {t:'11:20 – 12:00',d:40,f:'Mesa redonda',ev:'Instituto de Investigaciones Médicas “Dr. Alfredo Lanari”',x:{titulo:'Nuevos desafíos y transformaciones en el accionar de enfermería postpandemia: una mirada hacia la adaptación a las necesidades de la comunidad',moderador:'Lic. Prof. Tulio Cardich',disertantes:'Lic. Gustavo Balacco, Lic. Mabel Torres, Lic. Lorena Kwast, Lic. Prof. Sabrina Curletti'}},
+    {t:'12:00 – 12:40',d:40,f:'Disertaciones',ev:'Instituto de Tisioneumonología “Prof. Dr. Raúl Vacarezza”',list:[['TBC en primera persona. Experiencias, necesidades y construcción del autocuidado desde la perspectiva del paciente','Lic. Carolina Azzan'],['Fortalecimiento del cuidado de enfermería en un espacio multidisciplinario de atención de personas con fibrosis quística','Lic. Lourdes Satragno y Lic. Gabriel Galván']]},
     {t:'12:40 – 13:40',d:60,f:'',ev:'Receso / Almuerzo',p:1},
-    {t:'13:40 – 14:40',d:60,f:'Talleres',ev:'Talleres simultáneos a cargo de cada Instituto'},
-    {t:'14:40 – 15:20',d:40,f:'Simposio',ev:'Instituto Superior FACULTAR',x:{titulo:null,moderador:null,disertantes:null}},
-    {t:'15:20 – 16:00',d:40,f:'Simposio',ev:'Facultad de Medicina (UBA)',x:{titulo:null,moderador:null,disertantes:null}},
+    {t:'13:40 – 14:40',d:60,f:'Talleres',ev:'Simultáneos, a cargo de cada institución',list:[['Inteligencia artificial para la formación continua en Enfermería: de la investigación a la práctica','Hospital de Clínicas'],['Humanizar el cuidado de las personas con ostomías: una mirada desde la práctica de enfermería oncológica','Instituto Roffo'],['Mitos y verdades de la vía subcutánea','Instituto Lanari'],['Accesos venosos periféricos: del conocimiento a la práctica segura','Instituto Superior FACULTAR'],['Entrenamiento práctico en técnicas y procedimientos del paciente pediátrico crítico','Carrera de Lic. en Enfermería, Facultad de Medicina (UBA)']]},
+    {t:'14:40 – 15:20',d:40,f:'Disertación',ev:'Instituto Superior FACULTAR',x:{titulo:'Comunicación en Salud',disertantes:'Lic. Sabrina Pappaterra'}},
+    {t:'15:20 – 16:00',d:40,f:'Disertación',ev:'Carrera de Licenciatura en Enfermería, Facultad de Medicina (UBA)',x:{titulo:'El paciente pediátrico crónico complejo: una mirada desde enfermería',moderador:'Lic. María Santini',disertantes:'Lic. Gabriela Abtt'}},
     {t:'16:00 – 16:30',d:30,f:'',ev:'Café / Break',p:1},
-    {t:'16:30 – 17:10',d:40,f:'Conclusión',ev:'Directores/as de Enfermería de los Hospitales Universitarios',x:{titulo:null}},
+    {t:'16:30 – 17:10',d:40,f:'Mesa redonda',ev:'Cierre de la jornada y conclusiones',x:{disertantes:'Directores/as de Enfermería: Prof. Lic. Ricardo Molina (Clínicas), Lic. Mercedes Serrano (Roffo), Lic. Enrique Dree (Vacarezza), Lic. Prof. Tulio Cardich (Lanari) y Lic. María Santini (Carrera de Lic. en Enfermería, FCM)',moderador:'Mg. Lic. Prof. Leandro Guerschberg (Instituto Superior FACULTAR)'}},
     {t:'17:10',d:null,f:'',ev:'Sorteos y cierre oficial'}
   ];
-  var L={titulo:'Disertación',moderador:'Moderador/a',disertantes:'Disertante/s'};
+  var L={titulo:'Título',moderador:'Moderador/a',disertantes:'Disertante/s'};
   var tb=document.querySelector('#prog tbody'),h='';
   prog.forEach(function(r){
     var det='';
-    if(r.x){det='<dl class="det">';for(var k in r.x){var v=r.x[k];det+='<dt>'+L[k]+'</dt><dd'+(v?'':' class="tbc"')+'>'+(v||TBC)+'</dd>';}det+='</dl>';}
+    if(r.x){det='<dl class="det">';['titulo','moderador','disertantes'].forEach(function(k){if(r.x[k])det+='<dt>'+L[k]+'</dt><dd'+(k=='titulo'?' class="tit"':'')+'>'+r.x[k]+'</dd>';});det+='</dl>';}
+    if(r.list){det+='<ul class="sub">';r.list.forEach(function(it){det+='<li><span class="tit">'+it[0]+'</span><span class="who">'+it[1]+'</span></li>';});det+='</ul>';}
     h+='<tr'+(r.p?' class="pause"':'')+'><td class="t">'+r.t+' hs'+(r.d?'<small>'+r.d+' min</small>':'')+'</td><td class="type">'+(r.f?'<span class="tag">'+r.f+'</span>':'')+'</td><td><div class="ev">'+(r.f?'<span class="muted" style="font-weight:600">'+r.f+': </span>':'')+r.ev+'</div>'+det+'</td></tr>';
   });
   tb.innerHTML=h;
