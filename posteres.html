@@ -96,6 +96,24 @@ p{margin:0 0 10px;text-wrap:pretty}
 @media (max-width:420px){
   .card{grid-template-columns:1fr}.thumb{max-width:200px}
 }
+.premios{padding-block:28px 4px}
+.premios h2{font-size:26px;font-weight:800;margin-bottom:4px}
+.premios>p{color:var(--muted);margin-bottom:16px}
+.aws{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.aw{display:flex;flex-direction:column;gap:8px;background:var(--paper);padding:16px 18px;text-decoration:none;color:var(--text);font-weight:400;border-top:5px solid var(--orange);box-shadow:0 2px 10px rgba(30,38,85,.06);transition:box-shadow .15s}
+.aw.mh{border-top-color:var(--green)}
+.aw:hover{color:var(--text);box-shadow:0 4px 18px rgba(30,38,85,.16)}
+.aw-l{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--muted)}
+.aw-l svg{width:34px;height:34px;flex:none;color:var(--orange)}.aw.mh .aw-l svg{color:var(--green)}
+.aw-l b{display:block;font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--orange-600)}.aw.mh .aw-l b{color:var(--green-600)}
+.aw-t{font-weight:700;font-size:16.5px;line-height:1.3;color:var(--navy)}
+.aw-t .code{font-size:13px;padding:2px 7px;margin-right:4px;vertical-align:1px}
+.aw-a{font-size:14px;color:var(--muted)}
+.prize{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--orange-600);padding:3px 10px 3px 7px}
+.prize svg{width:16px;height:16px}.prize.mh{background:var(--green-600)}
+.card.award.pp{box-shadow:inset 0 0 0 3px var(--orange),0 2px 10px rgba(30,38,85,.06)}
+.card.award.mh{box-shadow:inset 0 0 0 3px var(--green),0 2px 10px rgba(30,38,85,.06)}
+@media (max-width:720px){.aws{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -117,6 +135,33 @@ p{margin:0 0 10px;text-wrap:pretty}
     </div>
   </div>
 </div></header>
+
+<section class="wrap premios" aria-labelledby="premios-h">
+  <h2 id="premios-h">Pósteres premiados</h2>
+  <p>El Comité Científico distinguió a los mejores trabajos científicos en póster de cada categoría.</p>
+  <div class="aws">
+      <a class="aw pp" href="#E7">
+        <span class="aw-l"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="14" r="6"/><path d="m9 2 3 6 3-6M12 11.5l.9 1.8 2 .3-1.45 1.4.35 2-1.8-.95-1.8.95.35-2-1.45-1.4 2-.3z"/></svg><span><b>Primer Premio</b>Categoría Estudiante</span></span>
+        <span class="aw-t"><span class="code est">E7</span> Inteligencia Artificial y formación en Enfermería. ¿Puede la IA enseñarnos a cuidar?</span>
+        <span class="aw-a">Escalante Milagros; Machado Leonardo; Vázquez Carlos; Flores Fátima; Alvarado Nataly; Olearte Miriam; Generoso Ornella</span>
+      </a>
+      <a class="aw pp" href="#P1">
+        <span class="aw-l"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="14" r="6"/><path d="m9 2 3 6 3-6M12 11.5l.9 1.8 2 .3-1.45 1.4.35 2-1.8-.95-1.8.95.35-2-1.45-1.4 2-.3z"/></svg><span><b>Primer Premio</b>Categoría Profesional</span></span>
+        <span class="aw-t"><span class="code pro">P1</span> Reducción de la neumonía asociada a ventilación mecánica mediante un paquete de medidas en UCI (2022–2026)</span>
+        <span class="aw-a">Balacco G; Cesar C; Martinez G</span>
+      </a>
+      <a class="aw mh" href="#E4">
+        <span class="aw-l"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="14" r="6"/><path d="m9 2 3 6 3-6M12 11.5l.9 1.8 2 .3-1.45 1.4.35 2-1.8-.95-1.8.95.35-2-1.45-1.4 2-.3z"/></svg><span><b>Mención de Honor</b>Categoría Estudiante</span></span>
+        <span class="aw-t"><span class="code est">E4</span> Promoción de la salud sexual y prevención de ETS en escuelas secundarias de San Pedro</span>
+        <span class="aw-a">Boffa Evangelina, Gracia Alejo, Baches Carla</span>
+      </a>
+      <a class="aw mh" href="#P13">
+        <span class="aw-l"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="14" r="6"/><path d="m9 2 3 6 3-6M12 11.5l.9 1.8 2 .3-1.45 1.4.35 2-1.8-.95-1.8.95.35-2-1.45-1.4 2-.3z"/></svg><span><b>Mención de Honor</b>Categoría Profesional</span></span>
+        <span class="aw-t"><span class="code pro">P13</span> Nuevas tecnologías en cirugía oncológica: impacto en la valoración de enfermería y evolución del paciente</span>
+        <span class="aw-a">Rearte Ortiz S. Y.; Equipo de Enfermería en Cirugía Oncológica</span>
+      </a>
+  </div>
+</section>
 
 <main class="wrap">
   <div class="tools">
@@ -179,13 +224,13 @@ p{margin:0 0 10px;text-wrap:pretty}
         <button class="more" type="button" aria-expanded="false" aria-controls="res-E3">Leer resumen completo</button>
       </div>
     </article>
-    <article class="card" id="E4" data-cat="est" data-turno="1" data-ord="4">
+    <article class="card award mh" id="E4" data-cat="est" data-turno="1" data-ord="4">
       <a class="thumb" href="docs/posteres/E4.pdf" target="_blank" rel="noopener" aria-label="Abrir el póster E4 en PDF">
         <img src="assets/posteres/E4.jpg" width="520" height="673" loading="lazy" alt="Miniatura del póster E4">
         <span class="open"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Abrir PDF</span>
       </a>
       <div class="info">
-        <div class="tags"><span class="code est">E4</span><span class="cat">Estudiante</span><span class="hora"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Exposición: 18/11, 10:50 a 11:20 hs</span></div>
+        <div class="tags"><span class="prize mh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="14" r="6"/><path d="m9 2 3 6 3-6M12 11.5l.9 1.8 2 .3-1.45 1.4.35 2-1.8-.95-1.8.95.35-2-1.45-1.4 2-.3z"/></svg>Mención de Honor</span><span class="code est">E4</span><span class="cat">Estudiante</span><span class="hora"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Exposición: 18/11, 10:50 a 11:20 hs</span></div>
         <h3><a href="docs/posteres/E4.pdf" target="_blank" rel="noopener">Promoción de la salud sexual y prevención de ETS en escuelas secundarias de San Pedro</a></h3>
         <dl class="meta">
           <div><dt>Autores/as</dt><dd>Boffa Evangelina, Gracia Alejo, Baches Carla</dd></div>
@@ -230,16 +275,16 @@ p{margin:0 0 10px;text-wrap:pretty}
         <button class="more" type="button" aria-expanded="false" aria-controls="res-E6">Leer resumen completo</button>
       </div>
     </article>
-    <article class="card" id="E7" data-cat="est" data-turno="1" data-ord="7">
+    <article class="card award pp" id="E7" data-cat="est" data-turno="1" data-ord="7">
       <a class="thumb" href="docs/posteres/E7.pdf" target="_blank" rel="noopener" aria-label="Abrir el póster E7 en PDF">
         <img src="assets/posteres/E7.jpg" width="520" height="673" loading="lazy" alt="Miniatura del póster E7">
         <span class="open"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Abrir PDF</span>
       </a>
       <div class="info">
-        <div class="tags"><span class="code est">E7</span><span class="cat">Estudiante</span><span class="hora"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Exposición: 18/11, 10:50 a 11:20 hs</span></div>
+        <div class="tags"><span class="prize pp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="14" r="6"/><path d="m9 2 3 6 3-6M12 11.5l.9 1.8 2 .3-1.45 1.4.35 2-1.8-.95-1.8.95.35-2-1.45-1.4 2-.3z"/></svg>Primer Premio</span><span class="code est">E7</span><span class="cat">Estudiante</span><span class="hora"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Exposición: 18/11, 10:50 a 11:20 hs</span></div>
         <h3><a href="docs/posteres/E7.pdf" target="_blank" rel="noopener">Inteligencia Artificial y formación en Enfermería. ¿Puede la IA enseñarnos a cuidar?</a></h3>
         <dl class="meta">
-          <div><dt>Autores/as</dt><dd>Escalante Milagros; Machado Leonardo; Vázquez Carlos; Flores Fátima; Alvarado Nataly; Olearte Miriam; Generoso Ornela</dd></div>
+          <div><dt>Autores/as</dt><dd>Escalante Milagros; Machado Leonardo; Vázquez Carlos; Flores Fátima; Alvarado Nataly; Olearte Miriam; Generoso Ornella</dd></div>
           <div><dt>Institución</dt><dd>Instituto Facultar, Tecnicatura Superior en Enfermería</dd></div>
           <div><dt>Eje</dt><dd>4 · Innovación, tecnologías e inteligencia artificial</dd></div>
         </dl>
@@ -247,13 +292,13 @@ p{margin:0 0 10px;text-wrap:pretty}
         <button class="more" type="button" aria-expanded="false" aria-controls="res-E7">Leer resumen completo</button>
       </div>
     </article>
-    <article class="card" id="P1" data-cat="pro" data-turno="1" data-ord="101">
+    <article class="card award pp" id="P1" data-cat="pro" data-turno="1" data-ord="101">
       <a class="thumb" href="docs/posteres/P1.pdf" target="_blank" rel="noopener" aria-label="Abrir el póster P1 en PDF">
         <img src="assets/posteres/P1.jpg" width="520" height="673" loading="lazy" alt="Miniatura del póster P1">
         <span class="open"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Abrir PDF</span>
       </a>
       <div class="info">
-        <div class="tags"><span class="code pro">P1</span><span class="cat">Profesional</span><span class="hora"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Exposición: 18/11, 10:50 a 11:20 hs</span></div>
+        <div class="tags"><span class="prize pp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="14" r="6"/><path d="m9 2 3 6 3-6M12 11.5l.9 1.8 2 .3-1.45 1.4.35 2-1.8-.95-1.8.95.35-2-1.45-1.4 2-.3z"/></svg>Primer Premio</span><span class="code pro">P1</span><span class="cat">Profesional</span><span class="hora"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Exposición: 18/11, 10:50 a 11:20 hs</span></div>
         <h3><a href="docs/posteres/P1.pdf" target="_blank" rel="noopener">Reducción de la neumonía asociada a ventilación mecánica mediante un paquete de medidas en UCI (2022–2026)</a></h3>
         <dl class="meta">
           <div><dt>Autores/as</dt><dd>Balacco G; Cesar C; Martinez G</dd></div>
@@ -451,13 +496,13 @@ p{margin:0 0 10px;text-wrap:pretty}
         <button class="more" type="button" aria-expanded="false" aria-controls="res-P12">Leer resumen completo</button>
       </div>
     </article>
-    <article class="card" id="P13" data-cat="pro" data-turno="2" data-ord="113">
+    <article class="card award mh" id="P13" data-cat="pro" data-turno="2" data-ord="113">
       <a class="thumb" href="docs/posteres/P13.pdf" target="_blank" rel="noopener" aria-label="Abrir el póster P13 en PDF">
         <img src="assets/posteres/P13.jpg" width="520" height="673" loading="lazy" alt="Miniatura del póster P13">
         <span class="open"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Abrir PDF</span>
       </a>
       <div class="info">
-        <div class="tags"><span class="code pro">P13</span><span class="cat">Profesional</span><span class="hora"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Exposición: 18/11, 16:00 a 16:30 hs</span></div>
+        <div class="tags"><span class="prize mh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="14" r="6"/><path d="m9 2 3 6 3-6M12 11.5l.9 1.8 2 .3-1.45 1.4.35 2-1.8-.95-1.8.95.35-2-1.45-1.4 2-.3z"/></svg>Mención de Honor</span><span class="code pro">P13</span><span class="cat">Profesional</span><span class="hora"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Exposición: 18/11, 16:00 a 16:30 hs</span></div>
         <h3><a href="docs/posteres/P13.pdf" target="_blank" rel="noopener">Nuevas tecnologías en cirugía oncológica: impacto en la valoración de enfermería y evolución del paciente</a></h3>
         <dl class="meta">
           <div><dt>Autores/as</dt><dd>Rearte Ortiz S. Y.; Equipo de Enfermería en Cirugía Oncológica</dd></div>
